@@ -1,4 +1,4 @@
-import React, { Componenet } from 'react'
+import React, { Component } from 'react'
 
 export default class UserSignUp extends Component {
   constructor() {

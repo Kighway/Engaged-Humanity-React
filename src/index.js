@@ -7,7 +7,7 @@ import './index.css';
 import ReduxPromise from 'redux-promise'
 import routes from './routes'
 import { Provider }  from 'react-router'
-import rootReducer from './reducers/root-reducer'
+import rootReducer from '../reducers/root-reducer'
 
 
 const store = applyMiddleware(ReduxPromise)(createStore)(rootReducer)

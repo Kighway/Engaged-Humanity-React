@@ -1,9 +1,9 @@
 import React from 'react'
 import { Route, IndexRoute } from 'react-router'
 // import App from './cointainers/app'
-import App from 'app'
+import App from './App'
 
-import UserSignUp from './components/user-sign-up'
+import UserSignUp from '../components/user-sign-up'
 
 
 export default (
