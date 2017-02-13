@@ -1,10 +1,13 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import {createStore, applyMiddleware} from 'redux'
+import { Router, browserHistory} from 'react-router'
 import App from './App';
 import './index.css';
 import ReduxPromise from 'redux-promise'
 import routes from './routes'
 import { Provider }  from 'react-router'
+import rootReducer from './reducers/root-reducer'
 
 
 const store = applyMiddleware(ReduxPromise)(createStore)(rootReducer)
@@ -12,6 +15,6 @@ const store = applyMiddleware(ReduxPromise)(createStore)(rootReducer)
 ReactDOM.render(
   <Provider store={store}>
     <Router history={browserHistory} routes={routes} />
-  </Provider>, 
+  </Provider>,
   document.getElementById('root')
 );
