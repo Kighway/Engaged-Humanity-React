@@ -2,12 +2,12 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import {createStore, applyMiddleware} from 'redux'
 import { Router, browserHistory} from 'react-router'
-import App from './App';
-import './index.css';
+import { Provider }  from 'react-redux'
 import ReduxPromise from 'redux-promise'
 import routes from './routes'
-import { Provider }  from 'react-router'
 import rootReducer from '../reducers/root-reducer'
+// import App from './App';
+// import './index.css';
 
 
 const store = applyMiddleware(ReduxPromise)(createStore)(rootReducer)
