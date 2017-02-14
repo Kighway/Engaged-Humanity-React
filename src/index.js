@@ -5,7 +5,7 @@ import { Router, browserHistory} from 'react-router'
 import { Provider }  from 'react-redux'
 import ReduxPromise from 'redux-promise'
 import routes from './routes'
-import rootReducer from '../reducers/root-reducer'
+import rootReducer from './reducers/root-reducer'
 // import App from './App';
 // import './index.css';
 
