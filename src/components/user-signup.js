@@ -13,13 +13,8 @@ class UserSignUp extends Component {
 
   handleSubmit(event) {
     event.preventDefault()
-
-    // try to set this up exactly how we want our rails params
-    // const user = { first_name: this.refs.first_name.value, last_name: this.refs.last_name.value, password: this.refs.userPassword.value, password_confirmation: this.refs.passwordConfirmation.value}
-    // .. fill in for rest of schema stuff
     const user = { first_name: this.refs.first_name.value, last_name: this.refs.last_name.value, username: this.refs.username.value, password: this.refs.userPassword.value, password_confirmation: this.refs.passwordConfirmation.value }
     this.props.createUser(user);
-    debugger
   }
 
   render() {
@@ -45,10 +40,7 @@ class UserSignUp extends Component {
 }
 
 function mapDispatchtoProps (dispatch) {
-
-  // parameters: all actions to dispatch
   return bindActionCreators( {createUser}, dispatch)
-
 }
 
 export default connect (null, mapDispatchtoProps)(UserSignUp)

@@ -1,24 +1,12 @@
 import axios from 'axios'
 import { browserHistory } from 'react-router'
+import  usersAdapter from '../adapters/usersAdapter'
 
-const URL = "http://localhost:3000/api/v1/"
+export function createUser(userParams){
+  const user = usersAdapter.loginUser(userParams)
 
-export const createUser = (user) => {
-  let response = axios.post( URL + 'signup', user).then ((innerResponse) => {
-    sessionStorage.setItem('jwt', innerResponse.data.jwt)
-    // browserHistory.push("/drinks")
-    return innerResponse
-  })
-
-  return {
-    type: "SIGN_UP",
-    payload: response
+    return {
+      payload: user,
+      type: 'SIGN_UP'
+    }
   }
-}
-
-// export function createUser(user) {
-//
-//   return { type: 'CREATE_USER',
-//            payload: 'test'
-//   }
-// }
