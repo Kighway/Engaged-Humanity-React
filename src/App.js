@@ -3,6 +3,7 @@ import logo from './logo.svg';
 import './App.css';
 import UserSignUp from './components/user-signup.js'
 import UserSignIn from './components/user-signin.js'
+import ShowFeed from './components/show-feed.js'
 
 
 class App extends Component {
@@ -19,6 +20,8 @@ class App extends Component {
         <UserSignUp />
         <p></p>
         <UserSignIn />
+        <p></p>
+        <ShowFeed />
       </div>
     );
   }

@@ -2,7 +2,6 @@ import React, { Component } from 'react'
 import { connect } from 'react-redux'
 import { bindActionCreators } from 'redux'
 import { loginUser } from '../actions'
-// import { createUser } from '../actions'
 
 class UserSignIn extends Component {
   constructor() {

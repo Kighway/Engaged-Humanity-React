@@ -30,9 +30,10 @@ export default {
     .then( (response) => {
       sessionStorage.setItem('jwt', response.data.jwt)
       browserHistory.push('/')
-      debugger
       return { user: response.data.jwt }
     })
+
+
 
   }
 }
