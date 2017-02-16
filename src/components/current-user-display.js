@@ -26,6 +26,7 @@ class CurrentUserDisplay extends Component {
 
     // for later: if sessionStorage is ""
     // then you don't need to send the API request below
+    //debugger
     this.props.getCurrentUserfromSessionData()
   }
 

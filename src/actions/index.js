@@ -31,7 +31,6 @@ export function loginUser(userParams) {
   // if the login was not successful
   // where should we check for this empty string to render
   // an invalid password error message?
-
   return {
     payload: responsePromise,
     type: "LOG_IN"

@@ -61,7 +61,6 @@ class ShowFeed extends Component {
               })
           }
         </div>
-        <LogOutButton />
         </div>
       )
     }
@@ -77,6 +76,7 @@ function mapDispatchtoProps (dispatch) {
 
 
 function mapStatetoProps(state) {
+  debugger
   return {
     feed: state.feed,
     currentUser: state.currentUser
