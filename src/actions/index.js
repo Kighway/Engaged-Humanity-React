@@ -4,12 +4,10 @@ import  feedAdapter from '../adapters/feedAdapter'
 
 export function createUser(userParams){
 
-  // responseObject will be the response.data object from axios
   const responsePromise = usersAdapter.createUser(userParams)
 
     // the response will have error messages, etc. if the creation
     // was not successful.  Where do we handle this?
-
 
     return {
 
@@ -33,7 +31,6 @@ export function loginUser(userParams) {
   // where should we check for this empty string to render
   // an invalid password error message?
 
-
   return {
     payload: responsePromise,
     type: "LOG_IN"
@@ -49,8 +46,6 @@ export function logoutUser() {
     type: "LOG_OUT"
   }
 }
-
-
 
 export function fetchFeed() {
   const feed = feedAdapter.fetchFeed()
@@ -69,7 +64,5 @@ export function getCurrentUserfromSessionData(jwtFromSession) {
     payload: responsePromise,
     type: "SET_CURRENT_USER"
   }
-
-
 
 }

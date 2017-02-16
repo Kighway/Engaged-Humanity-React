@@ -27,7 +27,6 @@ class ShowFeed extends Component {
 
 
   render() {
-
     if (this.props.feed.length === 0 || this.props.currentUser === "") {
       return (
         <div>
@@ -35,18 +34,6 @@ class ShowFeed extends Component {
       )
     } else {
 
-      // var articles = this.props.feed.articles_by_friends_likes.map (
-      //   function (article) {
-      //       return <div className = "article-container">
-      //           <h1>{article.title}</h1>
-      //           <a href>{article.link}</a>
-      //           <p>{article.author}</p>
-      //           <p>{article.source}</p>
-      //           <p>{article.date}</p>
-      //           <p>{article.description}</p>
-      //         </div>
-      //       }
-//      )
       // LAST POINT: Trying to get the list to re-render when
       // the currentUser changes
       // takes a refresh page to load current sessionStorage feed

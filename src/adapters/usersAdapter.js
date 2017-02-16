@@ -37,7 +37,6 @@ export default {
 
 
   createUser: function (userParams) {
-
   // this is the promise passed to the responseObject in the action/index.js
   return axios.post('/signup', userParams)
     .then( (response) => {
@@ -45,6 +44,9 @@ export default {
       // axios.defaults.headers.common['AUTHORIZATION'] = userData.data.jwt //minilecture
 
       // browserHistory.push('/')
+
+      // will this work?
+      axios.defaults.headers.common['AUTHORIZATION'] = sessionStorage.getItem('jwt')
 
       // when the promise is fulfilled, send this to the action/index.js
       return response.data
@@ -57,17 +59,11 @@ export default {
     return axios.post('/signin', userParams)
     .then( (response) => {
       sessionStorage.setItem('jwt', response.data.jwt)
+
       browserHistory.push('/showfeed')
+      // will this work?
+      //axios.defaults.headers.common['AUTHORIZATION'] = sessionStorage.getItem('jwt')
       return response.data
     })
-
-
-
   }
 }
-
-
-
-
-// let response = axios.post( URL + 'signup', user).then ((response) => {
-//   sessionStorage.setItem('jwt', response.data.jwt)
