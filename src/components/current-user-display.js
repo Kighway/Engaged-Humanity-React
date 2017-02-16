@@ -10,8 +10,6 @@ class CurrentUserDisplay extends Component {
   }
 
   componentDidMount() {
-
-
     // this should probably be moved to a different level
     // within the component mounting process
     // but the purpose of this
@@ -21,13 +19,16 @@ class CurrentUserDisplay extends Component {
       sessionStorage.jwt = ""
     }
 
-
     // when this app mounts
     // get the current user info from the api
     // the sessionStorage will be an HTML header
     // when the request is made by axios
+
+    // for later: if sessionStorage is ""
+    // then you don't need to send the API request below
     this.props.getCurrentUserfromSessionData()
   }
+
 
   render() {
       return (
