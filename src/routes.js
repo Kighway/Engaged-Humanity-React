@@ -7,10 +7,6 @@ import UserSignUp from './components/user-signup'
 import UserSignIn from './components/user-signin'
 import ShowFeed from './components/show-feed'
 
-
-
-
-
 export default (
 
     <Route path='/' component={App}>
