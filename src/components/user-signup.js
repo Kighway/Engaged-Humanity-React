@@ -17,21 +17,19 @@ class UserSignUp extends Component {
 
   render() {
     return (
-      <div className="signup-form">
+    <div className="login-page">
+      <div className="form">
         <form onSubmit={ this.handleSubmit }>
-        <label>First Name</label>
-        <input ref="first_name" />
-        <label>Last Name</label>
-        <input ref="last_name" />
-        <label>Username</label>
-        <input ref="username" />
-        <label>Password</label>
-        <input type="password" ref="userPassword" />
-        <label>Confirm Password</label>
-        <input type="password" ref="passwordConfirmation" />
+        <input ref="first_name" placeholder="first name"/>
+        <input ref="last_name" placeholder="last name"/>
+        <input ref="username" placeholder="username"/>
+        <input type="password" ref="userPassword" placeholder="password"/>
+        <input type="password" ref="passwordConfirmation" placeholder="verify password"/>
         <button type="submit"> Submit </button>
+        <p>Have an account? <a href="/signin">Sign in</a></p>
         </form>
       </div>
+    </div>
     )
   }
 
