@@ -3,6 +3,8 @@ import { connect } from 'react-redux'
 import { bindActionCreators } from 'redux'
 import { fetchFeed } from '../actions'
 import LogOutButton from '../components/logout-button'
+import LikeButton from '../components/like-button'
+
 
 class ShowFeed extends Component {
   constructor() {
@@ -46,13 +48,15 @@ class ShowFeed extends Component {
         <div>
           { this.props.feed.articles_by_friends_likes.map (
             function (article) {
-              return <div className = "article-container">
+              return <div id={`friend-like-${article.id}` } className="article-container">
+                  <h6> articleId: { article.id } </h6>
                   <h1>{article.title}</h1>
                   <a href>{article.link}</a>
                   <p>{article.author}</p>
                   <p>{article.source}</p>
                   <p>{article.date}</p>
                   <p>{article.description}</p>
+                  < LikeButton articleId={ article.id }/>
                 </div>
               })
           }
