@@ -17,7 +17,7 @@ class UserSignIn extends Component {
 
   render() {
     return (
-      <div>
+      <div className="signin-form">
         <form onSubmit={ this.handleSubmit }>
         <label>Username</label>
         <input ref="username" />
