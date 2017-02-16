@@ -7,30 +7,26 @@ import UserSignIn from './components/user-signin.js'
 import ShowFeed from './components/show-feed.js'
 import LogOutButton from './components/logout-button.js'
 import CurrentUserDisplay from './components/current-user-display.js'
+import { bindActionCreators } from 'redux'
+import { getCurrentUserfromSessionData } from './actions'
+import NavBar from './components/nav-bar.js'
 
 class App extends Component {
-// import { bindActionCreators } from 'redux'
-// import { getCurrentUserfromSessionData } from './actions'
-// class App extends Component {
-//   constructor() {
-//     super()
-//   }
+
   render() {
     // debugger
     return (
-      <div className="App">
+
+    <div className="App">
+      <NavBar/>
+      { this.props.children}
         <div className="App-header">
-        <img src='favicon.ico' className="App-logo" alt="logo" />
-          <CurrentUserDisplay />
         </div>
-        <p className="App-intro">
-          To get started, edit <code>src/App.js</code> and save to reload.
-        </p>
-        { this.props.children}
       </div>
     );
   }
 }
+
 
 function mapDispatchtoProps (dispatch) {
   return bindActionCreators( { getCurrentUserfromSessionData }, dispatch)
@@ -42,5 +38,7 @@ function mapStatetoProps(state) {
     currentUser: state.currentUser
   }
 }
+
+
 
 export default connect (mapStatetoProps, mapDispatchtoProps)(App)

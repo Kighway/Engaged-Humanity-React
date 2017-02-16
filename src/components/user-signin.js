@@ -17,15 +17,15 @@ class UserSignIn extends Component {
 
   render() {
     return (
-      <div className="signin-form">
+    <div className="login-page">
+      <div className="form">
         <form onSubmit={ this.handleSubmit }>
-        <label>Username</label>
-        <input ref="username" />
-        <label>Password</label>
-        <input type="password" ref="userPassword" />
+        <input ref="username" placeholder="username" />
+        <input type="password" ref="userPassword" placeholder="password" />
         <button type="submit"> Submit </button>
         </form>
       </div>
+    </div>
     )
   }
 

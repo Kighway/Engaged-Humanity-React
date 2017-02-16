@@ -33,7 +33,7 @@ class CurrentUserDisplay extends Component {
   render() {
       return (
         <div className = "current_user">
-          The current user is: { this.props.currentUser }
+          { this.props.currentUser }
         </div>
       )
     }

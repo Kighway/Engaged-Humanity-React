@@ -17,7 +17,7 @@ class LogOutButton extends Component {
       return (
         <button type="button" onClick={this.handleClick}>Log Out</button>
       )
-    }
+  }
 }
 
 function mapDispatchtoProps (dispatch) {
