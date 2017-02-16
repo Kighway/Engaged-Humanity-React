@@ -25,7 +25,8 @@ export default {
     .then( (response) => {
 
 //      sessionStorage.setItem('jwt', response.data.jwt)
-      browserHistory.push('/')
+      // browserHistory.push('/')
+      // debugger
 
       // when the promise is fulfilled, send this to the action/index.js
       return response.data
@@ -40,7 +41,9 @@ export default {
   return axios.post('/signup', userParams)
     .then( (response) => {
       sessionStorage.setItem('jwt', response.data.jwt)
-      browserHistory.push('/')
+      // axios.defaults.headers.common['AUTHORIZATION'] = userData.data.jwt //minilecture
+
+      // browserHistory.push('/')
 
       // will this work?
       axios.defaults.headers.common['AUTHORIZATION'] = sessionStorage.getItem('jwt')
@@ -57,15 +60,10 @@ export default {
     .then( (response) => {
       sessionStorage.setItem('jwt', response.data.jwt)
 
+      browserHistory.push('/showfeed')
       // will this work?
-      axios.defaults.headers.common['AUTHORIZATION'] = sessionStorage.getItem('jwt')
-
-
-      browserHistory.push('/')
+      //axios.defaults.headers.common['AUTHORIZATION'] = sessionStorage.getItem('jwt')
       return response.data
     })
-
-
-
   }
 }

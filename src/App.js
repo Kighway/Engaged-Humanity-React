@@ -7,17 +7,16 @@ import UserSignIn from './components/user-signin.js'
 import ShowFeed from './components/show-feed.js'
 import LogOutButton from './components/logout-button.js'
 import CurrentUserDisplay from './components/current-user-display.js'
-import { bindActionCreators } from 'redux'
-import { getCurrentUserfromSessionData } from './actions'
-
-
 
 class App extends Component {
-  constructor() {
-    super()
-  }
-
+// import { bindActionCreators } from 'redux'
+// import { getCurrentUserfromSessionData } from './actions'
+// class App extends Component {
+//   constructor() {
+//     super()
+//   }
   render() {
+    // debugger
     return (
       <div className="App">
         <div className="App-header">
@@ -27,13 +26,7 @@ class App extends Component {
         <p className="App-intro">
           To get started, edit <code>src/App.js</code> and save to reload.
         </p>
-
-        <UserSignUp />
-        <p></p>
-        <UserSignIn />
-        <LogOutButton />
-        <p></p>
-        <ShowFeed />
+        { this.props.children}
       </div>
     );
   }

@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 import { connect } from 'react-redux'
 import { bindActionCreators } from 'redux'
 import { fetchFeed } from '../actions'
+import LogOutButton from '../components/logout-button'
 
 class ShowFeed extends Component {
   constructor() {
@@ -26,9 +27,6 @@ class ShowFeed extends Component {
 
 
   render() {
-
-//    debugger
-
     if (this.props.feed.length === 0 || this.props.currentUser === "") {
       return (
         <div>
@@ -59,7 +57,7 @@ class ShowFeed extends Component {
               })
           }
         </div>
-
+        <LogOutButton />
         </div>
       )
     }
