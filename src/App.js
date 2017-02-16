@@ -7,6 +7,8 @@ import UserSignIn from './components/user-signin.js'
 import ShowFeed from './components/show-feed.js'
 import LogOutButton from './components/logout-button.js'
 import CurrentUserDisplay from './components/current-user-display.js'
+import { bindActionCreators } from 'redux'
+import { getCurrentUserfromSessionData } from './actions'
 
 class App extends Component {
 // import { bindActionCreators } from 'redux'

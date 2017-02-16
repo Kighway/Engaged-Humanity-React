@@ -1,6 +1,7 @@
 import { browserHistory } from 'react-router'
 import  usersAdapter from '../adapters/usersAdapter'
 import  feedAdapter from '../adapters/feedAdapter'
+import  articleAdapter from '../adapters/articleAdapter'
 
 export function createUser(userParams){
 
@@ -65,4 +66,13 @@ export function getCurrentUserfromSessionData(jwtFromSession) {
     type: "SET_CURRENT_USER"
   }
 
+}
+
+export function likeArticle(articleId) {
+  const responsePromise = articleAdapter.likeArticle(articleId)
+
+  return {
+    payload: responsePromise,
+    type: "I_DONT_KNOW_YET"
+  }
 }
