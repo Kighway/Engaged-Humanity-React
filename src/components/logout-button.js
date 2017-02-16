@@ -9,7 +9,6 @@ class LogOutButton extends Component {
     this.handleClick = this.handleClick.bind(this)
   }
 
-
   handleClick() {
    this.props.logoutUser();
   }
@@ -19,29 +18,17 @@ class LogOutButton extends Component {
         <button type="button" onClick={this.handleClick}>Log Out</button>
       )
     }
-
-
-
 }
-
-
-
 
 function mapDispatchtoProps (dispatch) {
   return bindActionCreators( { logoutUser }, dispatch)
 }
 
-
 // function mapStatetoProps(state) {
 //   return {
 //     feed: state.feed
 //   }
-//
-//
 // }
-
-
-
 
 // export default connect (mapStatetoProps, mapDispatchtoProps)(ShowFeed)
 export default connect (null, mapDispatchtoProps)(LogOutButton)

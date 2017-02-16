@@ -7,7 +7,6 @@ class UserSignUp extends Component {
   constructor() {
     super()
     this.handleSubmit = this.handleSubmit.bind(this)
-
   }
 
   handleSubmit(event) {
