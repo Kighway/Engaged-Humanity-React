@@ -17,7 +17,7 @@ export default {
 
   return axios.get('/articles')
     .then( (response) => {
-      browserHistory.push('/')
+      // browserHistory.push('/')
       return { feed: response.data }
     })
 

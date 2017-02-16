@@ -11,11 +11,8 @@ import CurrentUserDisplay from './components/current-user-display.js'
 class App extends Component {
 
 
-
-
-
-
   render() {
+    // debugger
     return (
       <div className="App">
         <div className="App-header">
@@ -25,13 +22,7 @@ class App extends Component {
         <p className="App-intro">
           To get started, edit <code>src/App.js</code> and save to reload.
         </p>
-
-        <UserSignUp />
-        <p></p>
-        <UserSignIn />
-        <LogOutButton />
-        <p></p>
-        <ShowFeed />
+        { this.props.children}
       </div>
     );
   }
