@@ -1,5 +1,7 @@
 import React from 'react'
-import { Route, IndexRoute } from 'react-router'
+// import { Route, IndexRoute } from 'react-router' // will we need IndexRoute eventually?
+import { Route } from 'react-router'
+
 // import App from './cointainers/app'
 import App from './App'
 

@@ -3,6 +3,6 @@ import usersReducer from './users-reducers'
 import feedReducer from './feed-reducers'
 
 export default combineReducers({
-  users: usersReducer,
+  currentUser: usersReducer,
   feed: feedReducer
 })
