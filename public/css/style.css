@@ -1,10 +1,19 @@
 @import url('https://fonts.googleapis.com/css?family=Raleway:200');
 
 .article-container {
-  background-color: lightseagreen;
+  background-color: #9dafcc;
 }
 
 .feed-container {
-  background-color: grey;
+  background-color: #dcdfe2;
   font-family: 'Raleway', sans-serif;
 }
+
+/*.signin-form {
+    background-color: #dcdfe2;
+}
+
+
+.signup-form {
+    background-color: #dcdfe2;
+}*/

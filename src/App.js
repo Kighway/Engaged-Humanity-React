@@ -19,8 +19,7 @@ class App extends Component {
     return (
       <div className="App">
         <div className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <h2>Welcome to React</h2>
+        <img src='favicon.ico' className="App-logo" alt="logo" />
           <CurrentUserDisplay />
         </div>
         <p className="App-intro">
