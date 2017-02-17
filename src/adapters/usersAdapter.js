@@ -59,6 +59,8 @@ export default {
     return axios.post('/signin', userParams)
     .then( (response) => {
       sessionStorage.setItem('jwt', response.data.jwt)
+      axios.defaults.headers.common['AUTHORIZATION'] = response.data.jwt
+
 
       browserHistory.push('/showfeed')
       // will this work?
