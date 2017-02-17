@@ -3,7 +3,7 @@ export default (state="", action) => {
     // payloads are resolved promises coming from the actions/index.js
     case "SET_CURRENT_USER":
       debugger
-      return action.payload.username
+      return action.payload
     case "CREATE_USER":
       return action.payload.username
     case "LOG_IN":
