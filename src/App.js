@@ -14,7 +14,6 @@ import NavBar from './components/nav-bar.js'
 class App extends Component {
 
   render() {
-    // debugger
     return (
 
     <div className="App">
