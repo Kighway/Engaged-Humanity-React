@@ -59,7 +59,6 @@ export function fetchFeed() {
 export function getCurrentUserfromSessionData(jwtFromSession) {
 
   const responsePromise = usersAdapter.getInitialUser(jwtFromSession)
-
   return {
     payload: responsePromise,
     type: "SET_CURRENT_USER"

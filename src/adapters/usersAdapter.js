@@ -8,7 +8,6 @@ axios.defaults.headers.common['AUTHORIZATION'] = sessionStorage.getItem('jwt')
 
 // axios.get('http://localhost:3000/api/v1/articles/')
 //   .then( (response) => {
-//     debugger
 //     return { user: response.data.jwt }
 //   })
 
@@ -26,9 +25,8 @@ export default {
 
 //      sessionStorage.setItem('jwt', response.data.jwt)
       // browserHistory.push('/')
-      // debugger
-
       // when the promise is fulfilled, send this to the action/index.js
+      debugger
       return response.data
     })
 

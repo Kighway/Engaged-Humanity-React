@@ -3,7 +3,7 @@ import { connect } from 'react-redux'
 import { bindActionCreators } from 'redux'
 import { getCurrentUserfromSessionData } from '../actions'
 
-class CurrentUserDisplay extends Component {
+class ShowFeed extends Component {
   constructor() {
     super()
 
@@ -19,8 +19,10 @@ class CurrentUserDisplay extends Component {
 
   render() {
       return (
-        <div className = "current_user">
-          { this.props.currentUser }
+        <div className = "profile-container">
+            <div className = "stat-container">
+              <h1>Hello, { this.props.username } </h1>
+            </div>
         </div>
       )
     }
@@ -33,8 +35,8 @@ function mapDispatchtoProps (dispatch) {
 
 function mapStatetoProps(state) {
   return {
-    currentUser: state.currentUser
+    username: state.currentUser
   }
 }
 
-export default connect (mapStatetoProps, mapDispatchtoProps)(CurrentUserDisplay)
+export default connect (mapStatetoProps, mapDispatchtoProps)(ShowFeed)
