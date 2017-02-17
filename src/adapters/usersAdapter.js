@@ -19,9 +19,8 @@ export default {
     .then( (response) => {
 //      sessionStorage.setItem('jwt', response.data.jwt)
       // browserHistory.push('/')
-      // debugger
-
       // when the promise is fulfilled, send this to the action/index.js
+      debugger
       return response.data
     })
 

@@ -15,8 +15,6 @@ export default {
 
   return axios.post(`/articles/${articleId}/like`)
     .then( (response) => {
-//      debugger
-
       // browserHistory.push('/')
       return { feed: response.data }
     })
