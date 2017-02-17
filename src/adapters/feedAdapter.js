@@ -16,6 +16,9 @@ export default {
   return axios.get('/articles')
     .then( (response) => {
       // browserHistory.push('/')
+
+      debugger
+
       return { feed: response.data }
     })
 
