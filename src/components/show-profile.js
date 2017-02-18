@@ -1,42 +1,34 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
-import { bindActionCreators } from 'redux'
-import { getCurrentUserfromSessionData } from '../actions'
 
 class ShowFeed extends Component {
-  constructor() {
-    super()
-
-  }
-
-  componentDidMount() {
-    if (sessionStorage.jwt === 'undefined') {
-      sessionStorage.jwt = ""
-    }
-    this.props.getCurrentUserfromSessionData()
-  }
-
 
   render() {
+    if (this.props.currentUser.followers) {
       return (
-        <div className = "profile-container">
-            <div className = "stat-container">
-              <h1>Hello, { this.props.username } </h1>
+        <div className="profile-container">
+            <div className="stat-container">
+              <h1>Hello, { this.props.currentUser.first_name } </h1>
+              <h2> Here is your first follower: { this.props.currentUser.followers["0"].first_name ? this.props.currentUser.followers["0"].first_name : null }</h2>
+            </div>
+        </div>
+      )
+    }
+
+      return (
+        <div className="profile-container">
+            <div className="stat-container">
+              <h1>Hello, { this.props.currentUser.first_name } </h1>
             </div>
         </div>
       )
     }
 }
 
-function mapDispatchtoProps (dispatch) {
-  return bindActionCreators( { getCurrentUserfromSessionData }, dispatch)
-}
-
-
 function mapStatetoProps(state) {
   return {
-    username: state.currentUser
+    currentUser: state.currentUser
   }
 }
 
-export default connect (mapStatetoProps, mapDispatchtoProps)(ShowFeed)
+export default connect (mapStatetoProps)(ShowFeed)

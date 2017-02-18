@@ -5,9 +5,6 @@ axios.defaults.baseURL = 'http://localhost:3000/api/v1'
 // the problem here is it will only set a default once, right?
 axios.defaults.headers.common['AUTHORIZATION'] = sessionStorage.getItem('jwt')
 
-import { browserHistory } from 'react-router'
-// import _ from 'lodash' the rebounce
-
 export default {
   fetchFeed: function () {
 
@@ -16,9 +13,6 @@ export default {
   return axios.get('/articles')
     .then( (response) => {
       // browserHistory.push('/')
-
-      debugger
-
       return { feed: response.data }
     })
 
