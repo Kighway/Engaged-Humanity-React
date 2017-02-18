@@ -2,50 +2,50 @@ import React, { Component } from 'react'
 import { connect } from 'react-redux'
 import { bindActionCreators } from 'redux'
 import { fetchFeed } from '../actions'
-import LogOutButton from '../components/logout-button'
 import LikeButton from '../components/like-button'
 
-
 class ShowFeed extends Component {
-  constructor() {
-    super()
-//    this.props.currentUser = this.props.currentUser.bind(this)
-
-  }
 
   componentDidMount() {
-
     this.props.fetchFeed()
-
   }
 
-
-
-  // handleSubmit(event) {
-  //   event.preventDefault()
-  //   const user = { first_name: this.refs.first_name.value, last_name: this.refs.last_name.value, username: this.refs.username.value, password: this.refs.userPassword.value, password_confirmation: this.refs.passwordConfirmation.value }
-  //   this.props.createUser(user);
-  // }
+//  component
 
 
   render() {
-    if (this.props.feed.length === 0 || this.props.currentUser === "") {
+    //debugger
+    if (!this.props.feed || this.props.feed.length === 0) {
       return (
         <div>
         </div>
       )
     } else {
 
-      // LAST POINT: Trying to get the list to re-render when
-      // the currentUser changes
-      // takes a refresh page to load current sessionStorage feed
-      // into here
+      // Object.keys(this.props.feed.).forEach(function (key) {
+      //   let obj = myObj[key];
+        // do something with obj
 
+//         const article_divs = Object.entries(this.props.feed.by_followings_likes).map (function (article) { return article[1] }).map (function (article) { return
+//           // <div id={`friend-like-${article["article"]["id"]}`} className='article-container'>
+//           //   <h6> Hello </h6>
+//           //
+//           // </div>
+//           "test"
+// //          article["article"]["title"]
+//           debugger
+//
+//         })
+        var articles = this.props.feed.by_following_likes
+
+        debugger
+
+//      });
       return (
-        <div className = "feed-container">
-        <h1> Articles for { this.props.currentUser }</h1>
-
-        <div>
+        <div className="feed-container">
+          <h1> Articles for { this.props.currentUser.first_name }</h1>
+          {  }
+{ /*        <div>
           { this.props.feed.articles_by_friends_likes.map (
             function (article) {
               return <div id={`friend-like-${article.id}` } className="article-container">
@@ -61,6 +61,7 @@ class ShowFeed extends Component {
               })
           }
         </div>
+*/ }
         </div>
       )
     }

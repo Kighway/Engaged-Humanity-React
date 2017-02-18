@@ -2,8 +2,6 @@ import axios from 'axios'
 
 axios.defaults.baseURL = 'http://localhost:3000/api/v1'
 
-
-
 axios.defaults.headers.common['AUTHORIZATION'] = sessionStorage.getItem('jwt')
 
 import { browserHistory } from 'react-router'
@@ -12,52 +10,50 @@ import { browserHistory } from 'react-router'
 export default {
   getInitialUser: function () {
 
+  axios.defaults.headers.common['AUTHORIZATION'] = sessionStorage.getItem('jwt')
 
-
-  // this is the promise passed to the responseObject in the action/index.js
   return axios.get('/current_user')
     .then( (response) => {
-//      sessionStorage.setItem('jwt', response.data.jwt)
       // browserHistory.push('/')
-      // when the promise is fulfilled, send this to the action/index.js
-      debugger
       return response.data
     })
-
   },
-
-
 
   createUser: function (userParams) {
   // this is the promise passed to the responseObject in the action/index.js
   return axios.post('/signup', userParams)
     .then( (response) => {
-      sessionStorage.setItem('jwt', response.data.jwt)
-      // axios.defaults.headers.common['AUTHORIZATION'] = userData.data.jwt //minilecture
 
-      // browserHistory.push('/')
-
-      // will this work?
-      axios.defaults.headers.common['AUTHORIZATION'] = sessionStorage.getItem('jwt')
-
-      // when the promise is fulfilled, send this to the action/index.js
+      // if the new username and password are authenticated...
+      if (response.data.jwt) {
+        sessionStorage.setItem('jwt', response.data.jwt)
+        axios.defaults.headers.common['AUTHORIZATION'] = response.data.jwt
+        browserHistory.push('/showfeed')
+      }
+      // else...
+      if (response.data.error) {
+        debugger
+      }
       return response.data
     })
-
   },
 
   loginUser: function (userParams) {
 
     return axios.post('/signin', userParams)
-    .then( (response) => {
-      sessionStorage.setItem('jwt', response.data.jwt)
-      axios.defaults.headers.common['AUTHORIZATION'] = response.data.jwt
+      .then( (response) => {
 
-
-      browserHistory.push('/showfeed')
-      // will this work?
-      //axios.defaults.headers.common['AUTHORIZATION'] = sessionStorage.getItem('jwt')
-      return response.data
-    })
+        // if the username and password are authenticated...
+        if (response.data.jwt) {
+          sessionStorage.setItem('jwt', response.data.jwt)
+          axios.defaults.headers.common['AUTHORIZATION'] = response.data.jwt
+          browserHistory.push('/showfeed')
+        }
+        // else...
+        if (response.data.error) {
+          debugger
+        }
+        return response.data
+      })
   }
 }

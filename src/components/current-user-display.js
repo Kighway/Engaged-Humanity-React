@@ -4,10 +4,6 @@ import { bindActionCreators } from 'redux'
 import { getCurrentUserfromSessionData } from '../actions'
 
 class CurrentUserDisplay extends Component {
-  constructor() {
-    super()
-
-  }
 
   componentDidMount() {
     if (sessionStorage.jwt === 'undefined') {
@@ -19,8 +15,8 @@ class CurrentUserDisplay extends Component {
 
   render() {
       return (
-        <div className = "current_user">
-          { this.props.currentUser }
+        <div className="current_user">
+          { this.props.currentUser.username ? this.props.currentUser.username: "" }
         </div>
       )
     }

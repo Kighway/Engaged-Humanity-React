@@ -3,38 +3,37 @@ import  usersAdapter from '../adapters/usersAdapter'
 import  feedAdapter from '../adapters/feedAdapter'
 import  articleAdapter from '../adapters/articleAdapter'
 
+export function getCurrentUserfromSessionData(jwtFromSession) {
+
+  const responsePromise = usersAdapter.getInitialUser(jwtFromSession)
+  return {
+    // because of redux-promise, this will wait
+    // to send until the responsePromise is resolved to response.data
+    // from the userAdapter, and then send it to the users-reducer
+    // to add to the store.
+
+    // this needs to be a promise in order for redux-promise to work
+    // it can't be a property on the promise like responseObject.username
+    payload: responsePromise,
+    type: "SET_CURRENT_USER"
+  }
+
+}
+// DEBUG: create user dispatch is followed by a separate getCurrentUserfromSessionData dispatch; we should dispatch getCurrentUserfromSessionData once and only once
 export function createUser(userParams){
-
   const responsePromise = usersAdapter.createUser(userParams)
-
-    // the response will have error messages, etc. if the creation
-    // was not successful.  Where do we handle this?
-
     return {
-
-      // because of redux-promise, this will wait
-      // to send until the responsePromise is resolved to response.data
-      // from the userAdapter, and then send it to the users-reducer
-      // to add to the store.
-
-      // this needs to be a promise in order for redux-promise to work
-      // it can't be a property on the promise like responseObject.username
       payload: responsePromise,
       type: 'CREATE_USER'
     }
   }
 
-export function loginUser(userParams) {
-  const responsePromise = usersAdapter.loginUser(userParams)
-
-  // here, the promise will come back as empty strings
-  // if the login was not successful
-  // where should we check for this empty string to render
-  // an invalid password error message?
-  return {
-    payload: responsePromise,
-    type: "LOG_IN"
-  }
+export function loginUser(loginParams) {
+  const responsePromise = usersAdapter.loginUser(loginParams)
+    return {
+      payload: responsePromise,
+      type: "LOG_IN"
+    }
 }
 
 export function logoutUser() {
@@ -49,21 +48,10 @@ export function logoutUser() {
 
 export function fetchFeed() {
   const feed = feedAdapter.fetchFeed()
-
   return {
     payload: feed,
     type: "FETCH_FEED"
   }
-}
-
-export function getCurrentUserfromSessionData(jwtFromSession) {
-
-  const responsePromise = usersAdapter.getInitialUser(jwtFromSession)
-  return {
-    payload: responsePromise,
-    type: "SET_CURRENT_USER"
-  }
-
 }
 
 export function likeArticle(articleId) {
