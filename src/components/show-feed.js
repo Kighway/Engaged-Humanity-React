@@ -7,14 +7,18 @@ import LikeButton from '../components/like-button'
 class ShowFeed extends Component {
 
   componentDidMount() {
-    this.props.fetchFeed()
+
+    if (sessionStorage.jwt === 'undefined') {
+      sessionStorage.jwt = ""
+    }
+
+    if (sessionStorage.jwt !== "") {
+      this.props.fetchFeed()
+    }
   }
 
-//  component
-
-
   render() {
-    //debugger
+
     if (!this.props.feed || this.props.feed.length === 0) {
       return (
         <div>
@@ -22,51 +26,33 @@ class ShowFeed extends Component {
       )
     } else {
 
-      // Object.keys(this.props.feed.).forEach(function (key) {
-      //   let obj = myObj[key];
-        // do something with obj
+    var article_divs = <div></div>
 
-//         const article_divs = Object.entries(this.props.feed.by_followings_likes).map (function (article) { return article[1] }).map (function (article) { return
-//           // <div id={`friend-like-${article["article"]["id"]}`} className='article-container'>
-//           //   <h6> Hello </h6>
-//           //
-//           // </div>
-//           "test"
-// //          article["article"]["title"]
-//           debugger
-//
-//         })
-        var articles = this.props.feed.by_following_likes
+    if (this.props.feed.by_followings_likes) {
+      var feed_object = this.props.feed.by_followings_likes;
+      article_divs = Object.keys(feed_object).map(function(key, iterator) {
+        let article = feed_object[key]["article"]
 
-        debugger
+        return <div id={`friend-like-${article.id}`} className="article-container">
+          <h6> {article.id } </h6>
+          <h1> { article.title } </h1>
+          <a href>{article.link}</a>
+          <p>{article.author}</p>
+          <p>{article.source}</p>
+          <p>{article.date}</p>
+          <p>{article.description}</p>
+          <LikeButton articleId={ article.id }/>
+        </div>
+      })
+    }
 
-//      });
       return (
         <div className="feed-container">
           <h1> Articles for { this.props.currentUser.first_name }</h1>
-          {  }
-{ /*        <div>
-          { this.props.feed.articles_by_friends_likes.map (
-            function (article) {
-              return <div id={`friend-like-${article.id}` } className="article-container">
-                  <h6> articleId: { article.id } </h6>
-                  <h1>{article.title}</h1>
-                  <a href>{article.link}</a>
-                  <p>{article.author}</p>
-                  <p>{article.source}</p>
-                  <p>{article.date}</p>
-                  <p>{article.description}</p>
-                  < LikeButton articleId={ article.id }/>
-                </div>
-              })
-          }
-        </div>
-*/ }
+          { article_divs }
         </div>
       )
     }
-
-
   }
 
 }

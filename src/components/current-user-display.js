@@ -9,6 +9,7 @@ class CurrentUserDisplay extends Component {
     if (sessionStorage.jwt === 'undefined') {
       sessionStorage.jwt = ""
     }
+
     this.props.getCurrentUserfromSessionData()
   }
 
