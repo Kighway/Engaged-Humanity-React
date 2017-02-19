@@ -21,8 +21,9 @@ class ShowFeedByFollowerLikes extends Component {
         article_divs = Object.keys(feed_object).map(function(key) {
 
           let article = feed_object[key]["article"]
+          let liked = feed_object[key]["liked"]
 
-          return <ArticleInFeed article={ article }/>})
+          return <ArticleInFeed article={article} isLiked={liked} />})
       }
 
       return (

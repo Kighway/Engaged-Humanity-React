@@ -4,7 +4,6 @@ import ShowFeedByInterests from '../components/show-feed-by-interests'
 import Tabs from 'react-simpletabs'
 
 class FeedTabs extends Component {
-
   render() {
     return <div id="feed-container">
       <Tabs>
