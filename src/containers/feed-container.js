@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 import { connect } from 'react-redux'
 import { bindActionCreators } from 'redux'
 import { fetchFeed } from '../actions'
-import FeedTabs from '../containers/tabs'
+import FeedTabs from '../containers/feed-tabs'
 
 class FeedContainer extends Component {
 

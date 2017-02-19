@@ -22,7 +22,7 @@ class ShowFeedByInterest extends Component {
 
           let article = feed_object[key]["article"]
 
-          return <ArticleInFeed article={ article }/>})
+          return <ArticleInFeed key={article.id} article={ article }/>})
       }
 
 
