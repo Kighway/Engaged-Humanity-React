@@ -14,8 +14,13 @@ class LikeButton extends Component {
   }
 
   render() {
+      if (this.props.isLiked) {
+        var buttonContent = "Unlike"
+      } else {
+        var buttonContent = "Like"
+      }
       return (
-        <button type="button" onClick={this.handleClick}>Like!</button>
+        <button type="button" onClick={this.handleClick}>{ buttonContent }</button>
       )
     }
 }

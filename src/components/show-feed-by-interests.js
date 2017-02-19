@@ -21,8 +21,9 @@ class ShowFeedByInterest extends Component {
         article_divs = Object.keys(feed_object).map(function(key) {
 
           let article = feed_object[key]["article"]
+          let liked = feed_object[key]["liked"]
 
-          return <ArticleInFeed key={article.id} article={ article }/>})
+          return <ArticleInFeed key={article.id} article={ article } isLiked={liked}/>})
       }
 
 
