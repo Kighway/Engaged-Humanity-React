@@ -62,3 +62,12 @@ export function likeArticle(articleId) {
     type: "I_DONT_KNOW_YET"
   }
 }
+
+export function addInterest(interest) {
+  const responsePromise = usersAdapter.addInterest(interest)
+
+  return {
+    payload: responsePromise,
+    type: "ADD_INTEREST"
+  }
+}

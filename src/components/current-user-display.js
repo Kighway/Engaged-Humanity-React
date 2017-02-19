@@ -13,7 +13,6 @@ class CurrentUserDisplay extends Component {
     this.props.getCurrentUserfromSessionData()
   }
 
-
   render() {
       return (
         <div className="current_user">
