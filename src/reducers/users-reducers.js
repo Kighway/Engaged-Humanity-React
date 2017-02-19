@@ -9,6 +9,8 @@ export default (state="", action) => {
       return action.payload
     case "LOG_OUT":
       return ""
+    case "ADD_INTEREST":
+      return {...state, interests: [...state.interests, action.payload]}
     default:
       return state
   }

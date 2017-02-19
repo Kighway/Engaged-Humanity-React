@@ -55,5 +55,15 @@ export default {
         }
         return response.data
       })
+  },
+
+  addInterest: function (interestParam) {
+
+    return axios.post('/add-interest', interestParam)
+      .then( (response) => {
+        return response.data
+      })
   }
+
+
 }
