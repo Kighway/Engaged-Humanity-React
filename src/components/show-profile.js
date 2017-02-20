@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
-import ShowInterest from '../components/show-interests'
+import CurrentInterests from '../components/current-interests'
 
 class ShowProfile extends Component {
 
@@ -10,10 +10,11 @@ class ShowProfile extends Component {
         <div className="profile-container">
             <div className="stat-container">
               <h1>Hello, { this.props.currentUser.first_name } </h1>
+              <h2>Interests:</h2>
+              <CurrentInterests />
               <h2> { this.props.currentUser.followers ? this.props.currentUser.followers.length: null } followers</h2>
               <h2> { this.props.currentUser.followings ? this.props.currentUser.followings.length: null } followers</h2>
             </div>
-            <ShowInterest />
         </div>
       )
     }

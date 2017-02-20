@@ -18,7 +18,11 @@
 }
 
 
+.current_interest {
+  font-size: 20px;
 
+  margin: auto
+}
 
 .profile-container {
   background-color: #dcdfe2;
