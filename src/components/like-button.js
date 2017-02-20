@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
 import { bindActionCreators } from 'redux'
-import { likeArticle } from '../actions'
+import { toggleArticleLike } from '../actions'
 
 class LikeButton extends Component {
   constructor() {
@@ -10,7 +10,7 @@ class LikeButton extends Component {
   }
 
   handleClick() {
-   this.props.likeArticle(this.props.articleId)
+   this.props.toggleArticleLike(this.props.articleId)
   }
 
   render() {
@@ -26,7 +26,7 @@ class LikeButton extends Component {
 }
 
 function mapDispatchtoProps (dispatch) {
-  return bindActionCreators( { likeArticle }, dispatch)
+  return bindActionCreators( { toggleArticleLike }, dispatch)
 }
 
 export default connect (null, mapDispatchtoProps)(LikeButton)

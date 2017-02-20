@@ -54,18 +54,17 @@ export function fetchFeed() {
   }
 }
 
-export function likeArticle(articleId) {
-  const responsePromise = articleAdapter.likeArticle(articleId)
+export function toggleArticleLike(articleId) {
+  const responsePromise = articleAdapter.toggleArticleLike(articleId)
 
   return {
     payload: responsePromise,
-    type: "I_DONT_KNOW_YET"
+    type: "TOGGLE_LIKE"
   }
 }
 
 export function addInterest(interest) {
   const responsePromise = usersAdapter.addInterest(interest)
-
   return {
     payload: responsePromise,
     type: "ADD_INTEREST"
