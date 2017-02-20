@@ -28,6 +28,15 @@ export function createUser(userParams){
     }
   }
 
+export function checkUsername(username) {
+  const responsePromise = usersAdapter.checkUsername(username)
+    return {
+      payload: responsePromise,
+      type: "CHECK_USERNAME"
+    }
+}
+
+
 export function loginUser(loginParams) {
   const responsePromise = usersAdapter.loginUser(loginParams)
     return {
