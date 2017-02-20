@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import LogOutButton from '../components/logout-button.js'
 import CurrentUserDisplay from '../components/current-user-display.js'
+import WholeInterests from '../components/whole-interests'
 
 class NavBar extends Component {
     render () {
@@ -17,6 +18,8 @@ class NavBar extends Component {
         <div className="nav-bar">
         <a href='/showfeed'> Articles </a>
         <a href='/showprofile'><CurrentUserDisplay /></a>
+        <a href='/interests'> Interests</a>
+
         <LogOutButton/>
         </div>
       );
