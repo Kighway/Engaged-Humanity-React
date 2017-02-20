@@ -26,7 +26,6 @@ class ShowFeedByInterest extends Component {
           return <ArticleInFeed key={article.id} article={ article } isLiked={liked}/>})
       }
 
-
       return (
         <div className="inner-feed-container">
           { article_divs }
