@@ -1,7 +1,8 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
+import ShowInterest from '../components/show-interests'
 
-class ShowFeed extends Component {
+class ShowProfile extends Component {
 
   render() {
     if (this.props.currentUser.followers) {
@@ -9,8 +10,10 @@ class ShowFeed extends Component {
         <div className="profile-container">
             <div className="stat-container">
               <h1>Hello, { this.props.currentUser.first_name } </h1>
-              <h2> Here is your first follower: { this.props.currentUser.followers["0"].first_name ? this.props.currentUser.followers["0"].first_name : null }</h2>
+              <h2> { this.props.currentUser.followers ? this.props.currentUser.followers.length: null } followers</h2>
+              <h2> { this.props.currentUser.followings ? this.props.currentUser.followings.length: null } followers</h2>
             </div>
+            <ShowInterest />
         </div>
       )
     }
@@ -31,4 +34,4 @@ function mapStatetoProps(state) {
   }
 }
 
-export default connect (mapStatetoProps)(ShowFeed)
+export default connect (mapStatetoProps)(ShowProfile)
