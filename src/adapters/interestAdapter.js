@@ -13,7 +13,6 @@ export default {
   return axios.get('/interests')
     .then( (response) => {
       // browserHistory.push('/')
-      console.log(response.data)
       return { interests: response.data }
     })
 
