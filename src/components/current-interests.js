@@ -3,7 +3,7 @@ import { connect } from 'react-redux'
 
 class CurrentInterests extends Component {
   render() {
-      
+
       return (
         <div className="current_user">
           { this.props.currentUser.interests ? this.props.currentUser.interests.map(function (interest) {
