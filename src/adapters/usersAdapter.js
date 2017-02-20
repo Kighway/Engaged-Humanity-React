@@ -42,7 +42,6 @@ export default {
   // this is the promise passed to the responseObject in the action/index.js
   return axios.post('/check-username', username)
     .then( (response) => {
-      console.log(response.data.valid)
       return response.data
     })
   },
