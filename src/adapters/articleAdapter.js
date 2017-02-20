@@ -11,10 +11,12 @@ axios.defaults.headers.common['AUTHORIZATION'] = sessionStorage.getItem('jwt')
 export default {
   toggleArticleLike: function (articleId) {
 
+
   axios.defaults.headers.common['AUTHORIZATION'] = sessionStorage.getItem('jwt')
 
   return axios.post(`/articles/${articleId}/like`)
     .then( (response) => {
+
       return { likeToToggle: response.data }
     })
 

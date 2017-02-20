@@ -19,6 +19,12 @@ class LikeButton extends Component {
       } else {
         var buttonContent = "Like"
       }
+
+
+
+
+
+
       return (
         <button type="button" onClick={this.handleClick}>{ buttonContent }</button>
       )
