@@ -20,8 +20,14 @@
 
 .current_interest {
   font-size: 20px;
-
   margin: auto
+}
+
+.follower-info {
+  border-style: solid;
+  width: 150px;
+  margin: auto;
+  border-width: .5px;
 }
 
 .profile-container {

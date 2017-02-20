@@ -11,7 +11,10 @@ class CurrentInterests extends Component {
            return interest.title
 
 
-         }) : "" }
+
+         })
+
+         : "" }<p></p>
         </div>
       )
     }

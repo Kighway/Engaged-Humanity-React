@@ -9,11 +9,13 @@ class ShowProfile extends Component {
       return (
         <div className="profile-container">
             <div className="stat-container">
-              <h1>Hello, { this.props.currentUser.first_name } </h1>
+              <h1>{ this.props.currentUser.first_name } { this.props.currentUser.last_name } </h1>
               <h2>Interests:</h2>
               <CurrentInterests />
-              <h2> { this.props.currentUser.followers ? this.props.currentUser.followers.length: null } followers</h2>
-              <h2> { this.props.currentUser.followings ? this.props.currentUser.followings.length: null } followers</h2>
+                <div className="follower-info">
+                  <h2> { this.props.currentUser.followers ? this.props.currentUser.followers.length: null } followers</h2>
+                  <h2> { this.props.currentUser.followings ? this.props.currentUser.followings.length: null } followers</h2>
+                </div>
             </div>
         </div>
       )
