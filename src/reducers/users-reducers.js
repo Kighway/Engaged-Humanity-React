@@ -10,6 +10,9 @@ export default (state="", action) => {
     case "LOG_OUT":
       return ""
     case "ADD_INTEREST":
+      if (action.payload.duplicate) {
+        return state
+      }
       return {...state, interests: [...state.interests, action.payload]}
     default:
       return state

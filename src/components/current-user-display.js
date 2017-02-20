@@ -1,7 +1,9 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
 import { bindActionCreators } from 'redux'
+// these should only load once
 import { getCurrentUserfromSessionData } from '../actions'
+import { getInterests } from '../actions'
 
 class CurrentUserDisplay extends Component {
 
@@ -11,6 +13,8 @@ class CurrentUserDisplay extends Component {
     }
 
     this.props.getCurrentUserfromSessionData()
+    this.props.getInterests()
+
   }
 
   render() {
@@ -23,7 +27,7 @@ class CurrentUserDisplay extends Component {
 }
 
 function mapDispatchtoProps (dispatch) {
-  return bindActionCreators( { getCurrentUserfromSessionData }, dispatch)
+  return bindActionCreators( { getCurrentUserfromSessionData, getInterests }, dispatch)
 }
 
 
