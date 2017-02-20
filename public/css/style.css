@@ -174,3 +174,13 @@ button {
 .tabs-panel.is-active {
   display: block;
 }
+
+.create-user-error {
+  background-color: white;
+  color: #47cc2a;
+  font-style: italic;
+  height: 5vh;
+  /* margin: auto; */
+
+  text-align: center;
+}
