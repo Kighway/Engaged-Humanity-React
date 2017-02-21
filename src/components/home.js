@@ -7,7 +7,6 @@ class Home extends Component {
     return (
       <div className="home_page">
         { this.props.children }
-      <img src='favicon.ico' className="App-logo" alt="logo" />
       </div>
     );
   }
