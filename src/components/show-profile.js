@@ -14,7 +14,7 @@ class ShowProfile extends Component {
               <CurrentInterests />
                 <div className="follower-info">
                   <h2> { this.props.currentUser.followers ? this.props.currentUser.followers.length: null } followers</h2>
-                  <h2> { this.props.currentUser.followings ? this.props.currentUser.followings.length: null } followers</h2>
+                  <h2> { this.props.currentUser.followings ? this.props.currentUser.followings.length: null } following</h2>
                 </div>
             </div>
         </div>
