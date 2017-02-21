@@ -15,6 +15,5 @@ export default {
       // browserHistory.push('/')
       return { feed: response.data }
     })
-
   }
 }

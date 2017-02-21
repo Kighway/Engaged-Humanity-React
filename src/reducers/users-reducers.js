@@ -10,7 +10,14 @@ export default (state="", action) => {
     case "LOG_OUT":
       return ""
     case "ADD_INTEREST":
+      if (action.payload.duplicate) {
+        return state
+      }
       return {...state, interests: [...state.interests, action.payload]}
+    case "TOGGLE_LIKE":
+      return {...state, like_ids: action.payload.likeToToggle }
+
+
     default:
       return state
   }

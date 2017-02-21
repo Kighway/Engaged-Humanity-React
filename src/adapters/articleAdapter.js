@@ -9,14 +9,15 @@ axios.defaults.headers.common['AUTHORIZATION'] = sessionStorage.getItem('jwt')
 // import _ from 'lodash' the rebounce
 
 export default {
-  likeArticle: function (articleId) {
+  toggleArticleLike: function (articleId) {
+
 
   axios.defaults.headers.common['AUTHORIZATION'] = sessionStorage.getItem('jwt')
 
   return axios.post(`/articles/${articleId}/like`)
     .then( (response) => {
-      // browserHistory.push('/')
-      return { feed: response.data }
+
+      return { likeToToggle: response.data }
     })
 
   }
