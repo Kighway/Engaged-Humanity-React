@@ -1,8 +1,8 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
-import AddInterest from '../components/add-interest'
-import CurrentInterests from '../components/current-interests'
-import InterestElement from '../components/interest-element'
+import AddInterest from './add-interest'
+import CurrentInterests from './current-interests'
+import InterestElement from './interest-element'
 
 class WholeInterests extends Component {
 

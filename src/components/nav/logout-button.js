@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
 import { bindActionCreators } from 'redux'
-import { logoutUser } from '../actions'
+import { logoutUser } from '../../actions'
 
 class LogOutButton extends Component {
   constructor() {
@@ -15,7 +15,7 @@ class LogOutButton extends Component {
 
   render() {
       return (
-        <button type="button" onClick={this.handleClick}>Log Out</button>
+        <div onClick={this.handleClick}>LOGOUT</div>
       )
   }
 }

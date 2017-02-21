@@ -1,8 +1,8 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
-import CurrentInterests from '../components/current-interests'
+import CurrentInterests from '../interests/current-interests'
 
-class ShowProfile extends Component {
+class StatsContainer extends Component {
 
   render() {
     if (this.props.currentUser.followers) {
@@ -24,7 +24,7 @@ class ShowProfile extends Component {
       return (
         <div className="profile-container">
             <div className="stat-container">
-              <h1>Hello, { this.props.currentUser.first_name } </h1>
+              <h1> NOTHING HERE </h1>
             </div>
         </div>
       )
@@ -37,4 +37,4 @@ function mapStatetoProps(state) {
   }
 }
 
-export default connect (mapStatetoProps)(ShowProfile)
+export default connect (mapStatetoProps)(StatsContainer)

@@ -2,8 +2,8 @@ import React, { Component } from 'react'
 import { connect } from 'react-redux'
 import { bindActionCreators } from 'redux'
 // these should only load once
-import { getCurrentUserfromSessionData } from '../actions'
-import { getInterests } from '../actions'
+import { getCurrentUserfromSessionData } from '../../actions'
+import { getInterests } from '../../actions'
 
 class CurrentUserDisplay extends Component {
 
@@ -18,12 +18,28 @@ class CurrentUserDisplay extends Component {
   }
 
   render() {
+
+    if (this.props.currentUser.username) {
       return (
-        <div className="current_user">
-          { this.props.currentUser.username ? this.props.currentUser.username: "" }
+        <div className="nav-current-user-container">
+          <div className="nav-profile-image-container">
+          { this.props.currentUser.profile_url ?
+            <img className="nav-profile-pic" src={ this.props.currentUser.profile_url } />
+            : "" }
+          </div>
+          <div className="nav-username">
+            { this.props.currentUser.username ? this.props.currentUser.username: "" }
+          </div>
         </div>
       )
+    } else {
+      return (
+        <div>No current user</div>
+      )
     }
+  }
+
+
 }
 
 function mapDispatchtoProps (dispatch) {

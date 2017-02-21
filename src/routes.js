@@ -4,10 +4,10 @@ import App from './components/App'
 import Home from '../src/components/home'
 
 import FeedContainer from './components/feed/feed-container'
-import UserSignUp from './components/user-signup'
-import UserSignIn from './components/user-signin'
-import ShowProfile from './components/show-profile'
-import WholeInterests from './components/whole-interests'
+import UserSignUp from './components/login_create/user-signup'
+import UserSignIn from './components/login_create/user-signin'
+import ShowProfile from './components/user_views/show-profile'
+import WholeInterests from './components/interests/interests-container'
 
 export default (
 
