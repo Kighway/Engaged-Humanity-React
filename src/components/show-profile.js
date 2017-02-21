@@ -1,15 +1,21 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
+import CurrentInterests from '../components/current-interests'
 
-class ShowFeed extends Component {
+class ShowProfile extends Component {
 
   render() {
     if (this.props.currentUser.followers) {
       return (
         <div className="profile-container">
             <div className="stat-container">
-              <h1>Hello, { this.props.currentUser.first_name } </h1>
-              <h2> Here is your first follower: { this.props.currentUser.followers["0"].first_name ? this.props.currentUser.followers["0"].first_name : null }</h2>
+              <h1>{ this.props.currentUser.first_name } { this.props.currentUser.last_name } </h1>
+              <h2>Interests:</h2>
+              <CurrentInterests />
+                <div className="follower-info">
+                  <h2> { this.props.currentUser.followers ? this.props.currentUser.followers.length: null } followers</h2>
+                  <h2> { this.props.currentUser.followings ? this.props.currentUser.followings.length: null } following</h2>
+                </div>
             </div>
         </div>
       )
@@ -31,4 +37,4 @@ function mapStatetoProps(state) {
   }
 }
 
-export default connect (mapStatetoProps)(ShowFeed)
+export default connect (mapStatetoProps)(ShowProfile)
