@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
 import { bindActionCreators } from 'redux'
-import { addInterest } from '../actions'
+import { addInterest } from '../../actions'
 
 class InterestElement extends Component {
   constructor() {

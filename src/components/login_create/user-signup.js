@@ -1,8 +1,8 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
 import { bindActionCreators } from 'redux'
-import { createUser } from '../actions'
-import { checkUsername } from '../actions'
+import { createUser } from '../../actions'
+import { checkUsername } from '../../actions'
 import EmailValidator from 'email-validator'
 
 class UserSignUp extends Component {

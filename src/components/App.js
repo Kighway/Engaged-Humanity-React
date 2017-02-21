@@ -1,10 +1,10 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux'
 //import logo from '../logo.svg';
-import '../App.css';
+import './App.css';
 import { bindActionCreators } from 'redux'
 import { getCurrentUserfromSessionData } from '../actions'
-import NavBar from '../components/nav-bar.js'
+import NavBar from '../components/nav/nav-bar.js'
 
 class App extends Component {
 

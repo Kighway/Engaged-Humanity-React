@@ -1,8 +1,8 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
 import { bindActionCreators } from 'redux'
-import { addInterest } from '../actions'
-import InterestElement from '../components/interest-element'
+import { addInterest } from '../../actions'
+import InterestElement from './interest-element'
 import fuzzy from 'fuzzy'
 
 class AvailableInterests extends Component {

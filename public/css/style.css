@@ -1,13 +1,16 @@
 @import url('https://fonts.googleapis.com/css?family=Raleway:200');
 
-.article-container {
-  background-color: #ebe8ee;
-  border-radius: 25px;
-  width: 900px;
-  margin: auto;
+
+/* globals */
+
+.app-logo {
+  z-index: -1;
+      width: 100%;
+      height: 100%;
+      display: block;
 }
 
-
+/* feed */
 .feed-container {
   left: 5vw;
   position: absolute;
@@ -20,106 +23,12 @@
   font-family: 'Raleway', sans-serif;
 }
 
-
-.current_interest {
-  font-size: 20px;
-  margin: auto
-}
-
-.follower-info {
-  border-style: solid;
-  width: 150px;
-  margin: auto;
-  border-width: .5px;
-}
-
-.profile-container {
-  background-color: #dcdfe2;
-  font-family: 'Raleway', sans-serif;
-}
-.stat-container {
+.article-container {
   background-color: #ebe8ee;
-  font-family: 'Raleway', sans-serif;
-}
-
-
-.nav-bar {
-    text-decoration: none;
-    padding-bottom: 40px;
-    font-size: 40px;
-    font-family: 'Raleway', sans-serif;
-}
-
-a:link {
-  text-decoration: none;
-  color: black;
-  font-family: 'Raleway', sans-serif;
-}
-
-
-.login-page {
-  width: 360px;
-  /*padding: 8% 0 0;*/
+  border-radius: 25px;
+  width: 900px;
   margin: auto;
 }
-
-.login-page img {
-  padding-top: 100px;
-  height: 300px;
-  position: relative;
-  padding-bottom: 30px;
-  padding-left: 60px;
-}
-
-.form input {
-  font-family: "Roboto", sans-serif;
-  outline: 0;
-  background: #f2f2f2;
-  width: 100%;
-  border: 0;
-  margin: 0 0 15px;
-  padding: 15px;
-  box-sizing: border-box;
-  font-size: 14px;
-}
-.form button {
-  font-family: "Roboto", sans-serif;
-  text-transform: uppercase;
-  outline: 0;
-  background: #4CAF50;
-  width: 100%;
-  border: 0;
-  padding: 15px;
-  color: #FFFFFF;
-  font-size: 14px;
-  -webkit-transition: all 0.3 ease;
-  transition: all 0.3 ease;
-  cursor: pointer;
-}
-
-button {
-  font-family: "Roboto", sans-serif;
-  text-transform: uppercase;
-  outline: 0;
-  background: #637192;
-  width: 100px;
-  border: 0;
-  padding: 8px;
-  color: #FFFFFF;
-  font-size: 14px;
-  -webkit-transition: all 0.3 ease;
-  transition: all 0.3 ease;
-  cursor: pointer;
-}
-/*.signin-form {
-    background-color: #dcdfe2;
-}
-
-
-.signup-form {
-    background-color: #dcdfe2;
-}*/
-
 
 /*!
  *
@@ -189,37 +98,14 @@ button {
   display: block;
 }
 
-.create-user-error {
-  background-color: white;
-  color: #47cc2a;
-  font-style: italic;
-  height: 5vh;
-  /* margin: auto; */
 
-  text-align: center;
-}
+/* followings */
 
-.app-logo {
-  z-index: -1;
-      width: 100%;
-      height: 100%;
-      display: block;
-}
-
-.user-profile-pic {
-  width: 20%;
-  left: 5%;
-  position: absolute;
-  display: block;
-  height: 20%;
-}
-
-
-.x-div {
-  left: 90%;
-    position: relative;
-    display: block;
-    width: 5%;
+.follower-info {
+  border-style: solid;
+  width: 150px;
+  margin: auto;
+  border-width: .5px;
 }
 
 .followings-container {
@@ -299,9 +185,152 @@ border: 1px black solid;
 
 .potential-profile-pic {
   width: 20%;
-      left: 2px;
-      position: absolute;
-      display: block;
-      height: 20%;
-      min-height: 80%;
-    }
+  left: 2px;
+  position: absolute;
+  display: block;
+  height: 20%;
+  min-height: 80%;
+}
+
+.x-div {
+  left: 90%;
+    position: relative;
+    display: block;
+    width: 5%;
+}
+
+
+
+/* interests */
+
+.current_interest {
+  font-size: 20px;
+  margin: auto
+}
+
+/* profile */
+
+.profile-container {
+  background-color: #dcdfe2;
+  font-family: 'Raleway', sans-serif;
+}
+.stat-container {
+  background-color: #ebe8ee;
+  font-family: 'Raleway', sans-serif;
+}
+
+/* nav */
+
+.nav-bar {
+  display: flex;
+  flex-wrap: nowrap;
+  align-items: flex-start;
+  justify-content: space-between;
+  text-decoration: none;
+  padding-bottom: 40px;
+  font-size: 40px;
+  font-family: 'Raleway', sans-serif;
+}
+
+a:link {
+  text-decoration: none;
+  color: black;
+  font-family: 'Raleway', sans-serif;
+}
+
+/* login and sign up */
+
+.login-page {
+  width: 360px;
+  margin: auto;
+}
+
+.login-page img {
+  padding-top: 100px;
+  height: 300px;
+  position: relative;
+  padding-bottom: 30px;
+  padding-left: 60px;
+}
+
+.form input {
+  font-family: "Roboto", sans-serif;
+  outline: 0;
+  background: #f2f2f2;
+  width: 100%;
+  border: 0;
+  margin: 0 0 15px;
+  padding: 15px;
+  box-sizing: border-box;
+  font-size: 14px;
+}
+.form button {
+  font-family: "Roboto", sans-serif;
+  text-transform: uppercase;
+  outline: 0;
+  background: #4CAF50;
+  width: 100%;
+  border: 0;
+  padding: 15px;
+  color: #FFFFFF;
+  font-size: 14px;
+  -webkit-transition: all 0.3 ease;
+  transition: all 0.3 ease;
+  cursor: pointer;
+}
+
+button {
+  font-family: "Roboto", sans-serif;
+  text-transform: uppercase;
+  outline: 0;
+  background: #637192;
+  width: 100px;
+  border: 0;
+  padding: 8px;
+  color: #FFFFFF;
+  font-size: 14px;
+  -webkit-transition: all 0.3 ease;
+  transition: all 0.3 ease;
+  cursor: pointer;
+}
+
+
+.create-user-error {
+  background-color: white;
+  color: #47cc2a;
+  font-style: italic;
+  height: 5vh;
+  text-align: center;
+}
+
+.nav-current-user-container {
+  height: 40px;
+  width: 100px;
+  display: flex;
+}
+
+.nav-username {
+  font-size: large;
+  height: 100%;
+  top: 0px;
+  left: 20px;
+  display: block;
+}
+
+.nav-profile-image-container {
+  height: 100%;
+}
+
+.nav-profile-pic {
+  width: 40px;
+  height: 40px;
+  position: relative;
+  display: block;
+}
+
+.user-profile-pic {
+  width: 40px;
+  height: 40px;
+  position: relative;
+  display: block;
+}
