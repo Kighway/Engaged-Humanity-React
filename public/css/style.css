@@ -198,3 +198,110 @@ button {
 
   text-align: center;
 }
+
+.app-logo {
+  z-index: -1;
+      width: 100%;
+      height: 100%;
+      display: block;
+}
+
+.user-profile-pic {
+  width: 20%;
+  left: 5%;
+  position: absolute;
+  display: block;
+  height: 20%;
+}
+
+
+.x-div {
+  left: 90%;
+    position: relative;
+    display: block;
+    width: 5%;
+}
+
+.followings-container {
+      background-color: lightblue;
+      height: 50vh;
+      width: 50vw;
+      left: 0px;
+      position: absolute;}
+
+.current-followings-container {
+  top: 30%;
+justify-content: flex-start;
+flex-direction: column;
+display: flex;
+position: absolute;
+width: 96%;
+height: 68%;
+left: 2%;
+background-color: #ecec3c;
+margin: auto;
+}
+
+.following-element {
+align-self: center;
+  background-color: lightpink;
+margin: 1%;
+width: 96%;
+border: 1px black solid;
+}
+
+.followings-search-container {
+  background-color: lightyellow;
+    width: 96%;
+    margin: auto;
+    top: 2%;
+    display: block;
+    position: relative;
+    height: 25%;
+}
+
+.search-input {
+  width: 80%;
+    left: 10%;
+    position: absolute;
+    height: 40%;
+    top: 2px;
+}
+
+.search-submit {
+  background-color: #70dcff;
+      position: absolute;
+      min-height: 46%;
+      height: 40%;
+      width: 20%;
+      top: 2px;
+      right: 2%;
+    }
+
+.potential-followings-container {
+  background-color: #f3f3f3;
+      bottom: 0px;
+      justify-content: space-around;
+      display: flex;
+      align-items: stretch;
+      position: absolute;
+      z-index: 20;
+      height: 50%;
+      width: 100%;
+      }
+
+.search-potential-following {
+  background-color: #ccc6c6;
+  width: 45%;
+  height: 96%;
+}
+
+
+.potential-profile-pic {
+  width: 20%;
+      left: 2px;
+      position: absolute;
+      display: block;
+      height: 20%;
+      min-height: 80%;
+    }

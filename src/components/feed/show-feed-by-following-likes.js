@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
-import ArticleInFeed from '../components/article-in-feed'
+import ArticleInFeed from './article-in-feed'
 
 class ShowFeedByFollowerLikes extends Component {
 

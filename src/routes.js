@@ -3,7 +3,7 @@ import { Route, IndexRoute } from 'react-router'
 import App from './components/App'
 import Home from '../src/components/home'
 
-import FeedContainer from './containers/feed-container'
+import FeedContainer from './components/feed/feed-container'
 import UserSignUp from './components/user-signup'
 import UserSignIn from './components/user-signin'
 import ShowProfile from './components/show-profile'
