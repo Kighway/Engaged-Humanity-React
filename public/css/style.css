@@ -1,7 +1,10 @@
 @import url('https://fonts.googleapis.com/css?family=Raleway:200');
 
 .article-container {
-  background-color: #9dafcc;
+  background-color: #ebe8ee;
+  border-radius: 25px;
+  width: 900px;
+  margin: auto;
 }
 
 
@@ -13,7 +16,7 @@
 
 
 .inner-feed-container {
-  background-color: #dcdfe2;
+  background-color: #ffffff;
   font-family: 'Raleway', sans-serif;
 }
 
@@ -35,7 +38,7 @@
   font-family: 'Raleway', sans-serif;
 }
 .stat-container {
-  background-color: #dcdfe2;
+  background-color: #ebe8ee;
   font-family: 'Raleway', sans-serif;
 }
 
@@ -98,10 +101,10 @@ button {
   font-family: "Roboto", sans-serif;
   text-transform: uppercase;
   outline: 0;
-  background: #4CAF50;
+  background: #637192;
   width: 100px;
   border: 0;
-  padding: 15px;
+  padding: 8px;
   color: #FFFFFF;
   font-size: 14px;
   -webkit-transition: all 0.3 ease;
@@ -149,6 +152,7 @@ button {
   padding: 0 20px;
   max-height: 50px;
   border-bottom: 1px solid #ddd;
+  padding-left: 400px;
 }
 .tabs-menu {
   display: table;

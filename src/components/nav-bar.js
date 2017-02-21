@@ -18,9 +18,11 @@ class NavBar extends Component {
     } else {
       return (
         <div className="nav-bar">
-        <a href='/showfeed'> Articles </a>
+        <a href='/'> HOME • </a>
+        <a href='/showfeed'> ARTICLES </a>
         <a href='/showprofile'><CurrentUserDisplay /></a>
         <LogOutButton/>
+        <p></p>
         </div>
       );
     }
