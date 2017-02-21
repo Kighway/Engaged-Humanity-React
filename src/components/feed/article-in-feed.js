@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import LikeButton from '../components/like-button'
+import LikeButton from './like-button'
 
 class ArticleInFeed extends Component {
 

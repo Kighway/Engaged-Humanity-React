@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
-import ShowFeedByFollowingLikes from '../components/show-feed-by-following-likes'
-import ShowFeedByInterests from '../components/show-feed-by-interests'
+import ShowFeedByFollowingLikes from './show-feed-by-following-likes'
+import ShowFeedByInterests from './show-feed-by-interests'
 import Tabs from 'react-simpletabs'
 
 class FeedTabs extends Component {

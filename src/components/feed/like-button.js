@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
 import { bindActionCreators } from 'redux'
-import { toggleArticleLike } from '../actions'
+import { toggleArticleLike } from '../../actions'
 
 class LikeButton extends Component {
   constructor() {

@@ -73,7 +73,30 @@ export default {
       .then( (response) => {
         return response.data
       })
-  }
+  },
+
+  toggleFollowing: function (followingId) {
+
+
+  axios.defaults.headers.common['AUTHORIZATION'] = sessionStorage.getItem('jwt')
+
+  return axios.post(`/toggle-following`, followingId)
+    .then( (response) => {
+      return response.data
+    })
+
+  },
+
+  searchFollowing: function (query) {
+
+    return axios.post('/search-following', query)
+      .then( (response) => {
+        console.log(response.data)
+        return response.data
+      })
+  },
+
+
 
 
 }

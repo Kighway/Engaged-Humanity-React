@@ -16,6 +16,8 @@ export default (state="", action) => {
       return {...state, interests: [...state.interests, action.payload]}
     case "TOGGLE_LIKE":
       return {...state, like_ids: action.payload.likeToToggle }
+    case "TOGGLE_FOLLOWING":
+      return {...state, followings: action.payload.followings }
 
 
     default:

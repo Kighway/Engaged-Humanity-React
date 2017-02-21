@@ -85,10 +85,28 @@ export function toggleArticleLike(articleId) {
   }
 }
 
+export function toggleFollowing(FollowingId) {
+  const responsePromise = usersAdapter.toggleFollowing(FollowingId)
+
+  return {
+    payload: responsePromise,
+    type: "TOGGLE_FOLLOWING"
+  }
+}
+
+
 export function addInterest(interest) {
   const responsePromise = usersAdapter.addInterest(interest)
   return {
     payload: responsePromise,
     type: "ADD_INTEREST"
+  }
+}
+
+export function searchFollowing(query) {
+  const responsePromise = usersAdapter.searchFollowing(query)
+  return {
+    payload: responsePromise,
+    type: "POTENTIAL_FOLLOWINGS"
   }
 }
