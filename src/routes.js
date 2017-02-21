@@ -8,6 +8,7 @@ import UserSignUp from './components/login_create/user-signup'
 import UserSignIn from './components/login_create/user-signin'
 import ShowProfile from './components/user_views/show-profile'
 import WholeInterests from './components/interests/interests-container'
+import FollowingsContainer from './components/followings/followings-container'
 
 export default (
 
@@ -18,5 +19,6 @@ export default (
         <Route path='/showfeed' component={FeedContainer}></Route>
         <Route path='/showprofile' component={ShowProfile}></Route>
         <Route path='/interests' component={WholeInterests}></Route>
+        <Route path='/friends' component={FollowingsContainer}></Route>
     </Route>
 )

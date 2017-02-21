@@ -53,7 +53,6 @@ class SearchFollowingContainer extends Component {
 
         // shape this into something
         <div onClick={ this.handlePotentialClick } data-id={ potential_following.id } className="search-potential-following">
-        <img className="potential-profile-pic" src={ potential_following.profile_url } />
 
           <div className="search-potential-name">
             { potential_following.username }

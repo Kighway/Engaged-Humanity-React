@@ -31,7 +31,7 @@ class AddInterest extends Component {
       <div className="form">
         <form onSubmit={ this.handleSubmit }>
         <input ref="interest" onChange={ this.handleChange.bind(this)} placeholder="new interest" value={ this.state.interest_field } />
-        <button type="submit"> Submit </button>
+        <button type="button"> Submit </button>
         </form>
       <AvailableInterests current_search= { this.state.interest_field  } />
       </div>
