@@ -12,7 +12,6 @@ class Home extends Component {
         <AddInterest />
         <CurrentInterests />
         { this.props.children }
-      <img src='favicon.ico' className="App-logo" alt="logo" />
       </div>
     );
   }

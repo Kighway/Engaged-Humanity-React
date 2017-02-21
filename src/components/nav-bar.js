@@ -6,10 +6,13 @@ class NavBar extends Component {
     render () {
       if (sessionStorage.jwt === "") {
       return (
-        <div className="nav-bar">
-        <a href='/'> HOME • </a>
-        <a href='/signup'> SIGN UP • </a>
-        <a href='/signin'> SIGN IN  </a>
+        <div>
+        <img src='favicon.ico' className="App-logo" alt="logo" />
+          <div className="nav-bar">
+          <a href='/'> HOME • </a>
+          <a href='/signup'> SIGN UP • </a>
+          <a href='/signin'> SIGN IN  </a>
+          </div>
         </div>
       );
     } else {
