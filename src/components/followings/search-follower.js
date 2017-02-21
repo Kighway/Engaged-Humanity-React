@@ -16,12 +16,11 @@ class SearchFollowingContainer extends Component {
     this.setState({
       search_field: event.target.value
     })
-
-
   }
 
   handleSubmit() {
     event.preventDefault()
+    this.state.search_field = ""
     const query = { query: this.refs.following.value }
     if ( query.query != "") {
       this.props.searchFollowing(query);
@@ -30,12 +29,8 @@ class SearchFollowingContainer extends Component {
 
 
   handlePotentialClick(event) {
-
     let potential_id = event.target.getAttribute("data-id")
-
-    // make sure this is toggling properly
     this.props.toggleFollowing({id: potential_id})
-
   }
 
   render() {
@@ -49,16 +44,13 @@ class SearchFollowingContainer extends Component {
       potential_divs = <div></div>
     } else {
       let test = this.props.potential_followings
-      potential_divs = test.map(function(potential_following) { return (
+      potential_divs = test.map(function(potential_following) {
+        return (
 
         // shape this into something
-        <div onClick={ this.handlePotentialClick } data-id={ potential_following.id } className="search-potential-following">
-        <img className="potential-profile-pic" src={ potential_following.profile_url } />
-
-          <div className="search-potential-name">
-            { potential_following.username }
-          </div>
-
+        <div className="search-potential-following" >
+          <img className="potential-profile-pic" src={ potential_following.profile_url } onClick={ this.handlePotentialClick } data-id={ potential_following.id } />
+          <div className="search-potential-name" onClick={ this.handlePotentialClick } data-id={ potential_following.id } > { potential_following.username }  </div>
         </div>
       )}, this)
 
@@ -84,7 +76,8 @@ function mapDispatchtoProps (dispatch) {
 
 function mapStatetoProps(state) {
   return {
-    potential_followings: state.config.potential_followings
+    potential_followings: state.config.potential_followings,
+    searchField: state.config.searchField
   }
 }
 
