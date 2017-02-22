@@ -48,9 +48,18 @@ class SearchFollowingContainer extends Component {
         return (
 
         // shape this into something
-        <div className="search-potential-following" >
-          <img className="potential-profile-pic" src={ potential_following.profile_url } onClick={ this.handlePotentialClick } data-id={ potential_following.id } />
-          <div className="search-potential-name" onClick={ this.handlePotentialClick } data-id={ potential_following.id } > { potential_following.username }  </div>
+// <<<<<<< final-stylings
+        <div onClick={ this.handlePotentialClick } data-id={ potential_following.id } className="search-potential-following">
+
+          <div className="search-potential-name">
+            { potential_following.username }
+          </div>
+
+// =======
+//         <div className="search-potential-following" >
+//           <img className="potential-profile-pic" src={ potential_following.profile_url } onClick={ this.handlePotentialClick } data-id={ potential_following.id } />
+//           <div className="search-potential-name" onClick={ this.handlePotentialClick } data-id={ potential_following.id } > { potential_following.username }  </div>
+// >>>>>>> master
         </div>
       )}, this)
 

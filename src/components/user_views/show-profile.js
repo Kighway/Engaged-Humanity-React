@@ -11,10 +11,10 @@ class ShowProfile extends Component {
     if (this.props.currentUser) {
       return (
         <div className="profile-container">
-          <h1>HELLO FROM SHOW PROFILE</h1>
+
+          <img className="profile-pic" src={ this.props.currentUser.profile_url } />
+
           < StatsContainer />
-          < InterestsContainer />
-          < FollowingsContainer />
         </div>
       )
     }
@@ -22,7 +22,7 @@ class ShowProfile extends Component {
       return (
         <div className="profile-container">
             <div className="stat-container">
-              <h1> NOTHING YET AGAIN </h1>
+              <h1> ... </h1>
             </div>
         </div>
       )
