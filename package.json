@@ -28,6 +28,7 @@
     "traverse": "^0.6.6",
     "traverse-async": "^0.1.6",
     "valid-url": "^1.0.9"
+    "metascraper": "^1.0.6"
   },
   "scripts": {
     "start": "react-scripts start",

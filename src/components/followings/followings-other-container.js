@@ -4,7 +4,7 @@ import FollowingElement from './following-element'
 import SearchFollowingContainer from './search-follower'
 
 
-class FollowingsContainer extends Component {
+class FollowingsOtherContainer extends Component {
 
   render() {
     return (
@@ -27,8 +27,8 @@ class FollowingsContainer extends Component {
 
 function mapStatetoProps(state) {
   return {
-    followings: state.currentUser.followings
+    followings: state.otherUser.followings
   }
 }
 
-export default connect (mapStatetoProps)(FollowingsContainer)
+export default connect (mapStatetoProps)(FollowingsOtherContainer)

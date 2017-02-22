@@ -64,7 +64,7 @@ export default {
         }
         // else...
         if (response.data.error) {
-          debugger
+
         }
         return response.data
       })
