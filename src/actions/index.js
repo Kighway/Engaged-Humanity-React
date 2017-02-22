@@ -110,3 +110,11 @@ export function searchFollowing(query) {
     type: "POTENTIAL_FOLLOWINGS"
   }
 }
+
+export function fetchLinkSummary(url) {
+  const responsePromise = articleAdapter.fetchLinkSummary(url)
+  return {
+    payload: responsePromise,
+    type: "POTENTIAL_ARTICLE"
+  }
+}

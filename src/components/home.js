@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import FollowingsContainer from '../components/followings/followings-container'
-
+import CreateArticleContainer from '../components/add_article/create-article-container'
 
 class Home extends Component {
 
@@ -8,7 +8,7 @@ class Home extends Component {
   render() {
     return (
       <div className="home_page">
-        < FollowingsContainer />
+        < CreateArticleContainer />
         { this.props.children }
       </div>
     );
