@@ -141,3 +141,12 @@ export function addPotentialInterest(interest) {
    type: "ADD_POTENTIAL_INTEREST"
  }
 }
+
+export function removeInterest(interest_id) {
+  const responsePromise = usersAdapter.removeInterest(interest_id)
+
+ return {
+   payload: responsePromise,
+   type: "LOG_IN"
+ }
+}

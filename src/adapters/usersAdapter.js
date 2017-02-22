@@ -99,6 +99,14 @@ export default {
       })
   },
 
+  removeInterest: function (interest_id) {
+
+    return axios.post('/remove-interest', interest_id)
+      .then( (response) => {
+        return response.data
+      })
+  },
+
 
 
 
