@@ -110,3 +110,12 @@ export function searchFollowing(query) {
     type: "POTENTIAL_FOLLOWINGS"
   }
 }
+
+export function getOtherProfile(FollowingId) {
+  debugger
+  var responsePromise = 0
+  return {
+    payload: responsePromise,
+    type: "SHOW_OTHER_PROFILE"
+  }
+}

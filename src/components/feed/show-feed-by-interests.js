@@ -5,7 +5,6 @@ import ArticleInFeed from './article-in-feed'
 class ShowFeedByInterest extends Component {
 
   render() {
-
     if (!this.props.feed || this.props.feed.length === 0) {
       return (
         <div>
@@ -36,6 +35,7 @@ class ShowFeedByInterest extends Component {
 }
 
 function mapStatetoProps(state) {
+  debugger
   return {
     feed: state.feed
   }

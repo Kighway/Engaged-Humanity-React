@@ -6,6 +6,7 @@ export default (state="", action) => {
     case "CREATE_USER":
       return action.payload
     case "LOG_IN":
+      debugger
       return action.payload
     case "LOG_OUT":
       return ""
