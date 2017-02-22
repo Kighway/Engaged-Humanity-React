@@ -435,16 +435,15 @@ a:link {
 }
 
 
-
 button {
   font-family: "Raleway", sans-serif;
   text-transform: uppercase;
   outline: 0;
   background: #637192;
   color: #f9f7f7;
-  font-size: 14px;
-  width: 50%;
-  padding: 15px;
+  font-size: 11px;
+  width: 80%;
+  padding: 10px;
   -webkit-transition: all 0.3 ease;
   transition: all 0.3 ease;
   cursor: pointer;
@@ -526,7 +525,7 @@ button {
 
 
 .add-interest-container {
-  padding-top: 10px;
+  padding-top: 40px;
 }
 
 .interest-option {
