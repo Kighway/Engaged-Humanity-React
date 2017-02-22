@@ -12,7 +12,6 @@ class Home extends Component {
     if (sessionStorage.jwt === "") {
     return (
       <div className="home_page">
-      {/* < CreateArticleContainer /> */ }
         { this.props.children }
       </div>
     );

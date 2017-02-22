@@ -1,7 +1,44 @@
 @import url('https://fonts.googleapis.com/css?family=Raleway:200');
 
+.App {
+  text-align: center;
+}
 
+.App-logo {
+  /*animation: App-logo-spin infinite 20s linear;*/
+  padding-top: 100px;
+  height: 340px;
+  position: fixed;
+  left: 35%;
+  opacity: 121.7;
+  z-index: -2;
+  z-index: 30px;
+  padding-left: 60px;}
+
+/*.App-header {
+  background-color: #9dafcc;
+  height: 150px;
+  padding: 20px;
+  color: white;
+  font-family: 'Raleway', sans-serif;
+  letter-spacing: 5px;
+}*/
+
+.App-intro {
+  font-size: large;
+}
+
+
+
+@keyframes App-logo-spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
 /* globals */
+
+body {
+  background-color: rgba(222, 217, 217, 0.3);
+}
 
 .app-logo {
   z-index: -1;
@@ -11,24 +48,100 @@
 }
 
 /* feed */
-.feed-container {
-  left: 5vw;
-  position: absolute;
-  right: 5vw;
+#feed-container {
+  top: 80px;
+  position: relative;
+}
+
+
+.article-image-container {
+  width: 60px;
+  height: 60px;
+  align-self: center;
+  padding: 4px;
+}
+
+.article-image {
+  width: 100%;
+  height: 100%;
 }
 
 
 .inner-feed-container {
-  background-color: #ffffff;
   font-family: 'Raleway', sans-serif;
+  display: flex;
+  flex-direction: column;
+  text-align: left;
 }
 
 .article-container {
   background-color: #ebe8ee;
+  border: 1px rgba(0, 0, 0, 0.08) solid;
   border-radius: 25px;
-  width: 900px;
+  width: 96vw;
   margin: auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
 }
+
+.article-content {
+  padding: 7px;
+  min-width: 70vw;
+  max-width: 70vw;
+}
+
+.feed-article-title {
+  font-weight: 900;
+  font-size: x-large;
+
+}
+
+.feed-small-details {
+  font-size: x-small;
+}
+
+.feed-article-description {
+  font-size: smaller;
+  font-weight: 300;
+}
+
+.feed-article-author {
+
+}
+
+.feed-article-link {
+  font-size: smaller;
+  font-family: monospace !important;
+}
+.feed-article-author {
+
+}
+.feed-article-source {
+
+}
+.feed-article-date {
+
+}
+
+
+
+
+.recommended {
+  background-color: rgb(73, 169, 185);
+  font-size: x-small;
+}
+
+.not-recommended {
+  background-color: rgba(164, 73, 185, 0.42);
+  font-size: x-small;
+}
+
+.like-button {
+  border-radius: 20%;
+  width: 80px;
+  height: 80px;
+  margin: 20px;}
 
 /*!
  *
@@ -78,7 +191,11 @@
   line-height: 50px;
   border-bottom: 0;
   color: #a9a9a9;
+  font-family: fantasy;
+  font-style: italic;
+  font-weight: 900;
 }
+
 .tabs-menu-item:not(.is-active) a:hover {
   color: #3498db;
 }
@@ -216,7 +333,6 @@ border: 1px black solid;
 /* profile */
 
 .profile-container {
-  background-color: white;
   font-family: 'Raleway', sans-serif;
 }
 .stat-container {
@@ -225,6 +341,25 @@ border: 1px black solid;
   width: 400px;
   margin: auto;
 }
+
+
+/* create article */
+
+.create-article-preview-pic {
+      height: 300px;
+      padding-bottom: 0 !important;
+      padding-left: 0 !important;
+      padding-top: 0 !important;
+      border: 1px #b1aeae solid;
+      background-color: #dcd4dc;
+      width: 100px;
+      display: block;
+      margin: auto;
+      position: relative;
+      height: 100px !important;
+    }
+
+
 
 /* nav */
 
@@ -237,6 +372,8 @@ border: 1px black solid;
   padding-bottom: 40px;
   font-size: 50px;
   font-family: 'Raleway', sans-serif;
+  height: 40px;
+
 }
 
 a:link {
@@ -264,7 +401,8 @@ a:link {
   font-family: "Roboto", sans-serif;
   outline: 0;
   background: #f2f2f2;
-  width: 100%;
+  border: 1px blue solid !important;
+  width: 60%;
   border: 0;
   margin: 0 0 15px;
   padding: 15px;
@@ -274,11 +412,9 @@ a:link {
 .form button {
   font-family: "Roboto", sans-serif;
   text-transform: uppercase;
-  outline: 0;
   background: #4CAF50;
-  width: 100%;
-  border: 0;
-  padding: 15px;
+    width: 50%;
+      padding: 15px;
   color: #FFFFFF;
   font-size: 14px;
   -webkit-transition: all 0.3 ease;
@@ -289,14 +425,11 @@ a:link {
 
 
 button {
-  font-family: "Roboto", sans-serif;
+  font-family: inherit;
   text-transform: uppercase;
   outline: 0;
   background: #637192;
-  width: 100px;
-  border: 0;
-  padding: 8px;
-  color: #FFFFFF;
+  color: #f9f7f7;
   font-size: 14px;
   -webkit-transition: all 0.3 ease;
   transition: all 0.3 ease;
@@ -305,11 +438,14 @@ button {
 
 
 .create-user-error {
-  background-color: white;
   color: #47cc2a;
+  margin: auto;
   font-style: italic;
-  height: 5vh;
-  text-align: center;
+  height: 12px;
+  position: relative;
+  font-size: 102x;
+  left: 200px;
+  top: 25px;
 }
 
 .nav-current-user-container {
@@ -318,12 +454,19 @@ button {
   display: flex;
 }
 
+.nav-logout {
+  color: #571d8c;
+}
+
 .nav-username {
-  font-size: 50px;
   height: 100%;
+  text-transform: uppercase;
+  font-family: 'Raleway', sans-serif;
+  font-size: small;
   top: 0px;
   left: 20px;
   display: block;
+  color: #571d8c;
 }
 
 .nav-profile-image-container {
@@ -337,11 +480,23 @@ button {
   display: block;
 }
 
-.profile-pic {
+.stats-container {
+  background-color: white;
+  font-family: 'Raleway', sans-serif;
+  border: 1px darkgray solid;
+  padding: 20px;
+  width: 300px;
+}
 
+.profile-pic {
   margin: auto;
   max-width:20%;
   max-height:20%;
+}
+
+.profile-components {
+  display: flex;
+  justify-content: space-around;
 }
 
 .user-profile-pic {
@@ -349,4 +504,20 @@ button {
   max-height: 70px;
   position: relative;
   display: block;
+}
+
+
+.add-interest-container {
+
+}
+
+.interest-option {
+  width: 33% !important;
+}
+
+.whole-interests {
+  width: 300px;
+padding: 20px;
+  border: 1px darkgray solid;
+  background-color: white;
 }

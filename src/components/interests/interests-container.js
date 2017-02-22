@@ -11,7 +11,7 @@ class WholeInterests extends Component {
     return (
       <div className="whole-interests">
         <AddInterest />
-        <CurrentInterests />
+        { /* <CurrentInterests /> */ }
       </div>
     );
   }

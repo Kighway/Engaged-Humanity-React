@@ -34,7 +34,7 @@ class CurrentUserDisplay extends Component {
       )
     } else {
       return (
-        <div>No current user</div>
+        <div></div>
       )
     }
   }

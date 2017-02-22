@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
 import { bindActionCreators } from 'redux'
-import { addInterest } from '../../actions'
+import { addPotentialInterest } from '../../actions'
 
 class InterestElement extends Component {
   constructor() {
@@ -9,19 +9,19 @@ class InterestElement extends Component {
     this.handleClick = this.handleClick.bind(this)
   }
 
-  handleClick() {
-   this.props.addInterest( {id: this.props.interestId })
+  handleClick(event) {
+    this.props.addPotentialInterest(event.target.textContent)
   }
 
   render() {
-      return (
-        <button className="interest-option" type="button" onClick={this.handleClick}>{  this.props.interestTitle } </button>
+    return (
+        <button className="interest-option" type="button" onClick={this.handleClick}>{  this.props.interestTitle }</button>
       )
     }
 }
 
 function mapDispatchtoProps (dispatch) {
-  return bindActionCreators( { addInterest }, dispatch)
+  return bindActionCreators( { addPotentialInterest }, dispatch)
 }
 
 export default connect (null, mapDispatchtoProps)(InterestElement)

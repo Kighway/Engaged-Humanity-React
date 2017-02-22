@@ -5,30 +5,30 @@ import WholeInterests from '../interests/interests-container'
 
 class NavBar extends Component {
     render () {
-      if (sessionStorage.jwt === "") {
-      return (
-        <div>
-        <img src='favicon.ico' className="App-logo" alt="logo" />
-          <div className="nav-bar">
-          <a href='/'> HOME • </a>
-          <a href='/signup'> SIGN UP • </a>
-          <a href='/signin'> SIGN IN  </a>
+      if (sessionStorage.jwt && sessionStorage.jwt !== "") {
+        return (
+          <div>
+            <div className="nav-bar">
+            <a href='/'> HOME • </a>
+            <a href='/showfeed'> FEED • </a>
+            <LogOutButton/> •
+            <a href='/showprofile'> <CurrentUserDisplay /></a>
+            <p></p>
+            </div>
           </div>
-        </div>
-      );
-    } else {
-      return (
-        <div>
-          <div className="nav-bar">
-          <a href='/'> HOME • </a>
-          <a href='/showfeed'> FEED • </a>
-          <LogOutButton/> •
-          <a href='/showprofile'> <CurrentUserDisplay /></a>
-          <p></p>
+        );
+      } else {
+        return (
+          <div>
+          <img src='favicon.ico' className="App-logo" alt="logo" />
+            <div className="nav-bar">
+            <a href='/'> HOME • </a>
+            <a href='/signup'> SIGN UP • </a>
+            <a href='/signin'> SIGN IN  </a>
+            </div>
           </div>
-        </div>
-      );
-    }
+        );
+      }
   }
 }
 

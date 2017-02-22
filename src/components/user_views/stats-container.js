@@ -7,8 +7,7 @@ class StatsContainer extends Component {
   render() {
     if (this.props.currentUser.followers) {
       return (
-        <div className="profile-container">
-            <div className="stat-container">
+        <div className="stats-container" >
               <h1>{ this.props.currentUser.first_name } { this.props.currentUser.last_name } </h1>
               <h2>Interests:</h2>
               <CurrentInterests />
@@ -19,7 +18,6 @@ class StatsContainer extends Component {
                 </div>
                 <a href="/friends">Manage Connections</a>
                 <br />
-            </div>
         </div>
       )
     }

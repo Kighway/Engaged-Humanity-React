@@ -120,10 +120,24 @@ export function fetchLinkSummary(url) {
 }
 
  export function getOtherProfile(FollowingId) {
-  debugger
   var responsePromise = 0
   return {
     payload: responsePromise,
     type: "SHOW_OTHER_PROFILE"
   }
+}
+
+export function createArticle(article_info) {
+  const responsePromise = articleAdapter.createArticle(article_info)
+ return {
+   payload: responsePromise,
+   type: "TOGGLE_LIKE"
+ }
+}
+
+export function addPotentialInterest(interest) {
+ return {
+   payload: interest,
+   type: "ADD_POTENTIAL_INTEREST"
+ }
 }

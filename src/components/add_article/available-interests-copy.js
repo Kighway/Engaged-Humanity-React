@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 import { connect } from 'react-redux'
 import { bindActionCreators } from 'redux'
 import { addInterest } from '../../actions'
-import InterestElement from './interest-element'
+import InterestElement from './interest-element-copy'
 import fuzzy from 'fuzzy'
 
 class AvailableInterests extends Component {
@@ -12,7 +12,6 @@ class AvailableInterests extends Component {
   }
 
   render() {
-    console.log(fuzzy)
     var interest_divs = <div></div>
 
     if (typeof this.props.available_interests != 'undefined') {
