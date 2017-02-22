@@ -20,9 +20,11 @@ class ShowFeedByInterest extends Component {
         article_divs = Object.keys(feed_object).map(function(key) {
 
           let article = feed_object[key]["article"]
-          let liked = feed_object[key]["liked"]
 
-          return <ArticleInFeed key={article.id} article={ article } isLiked={liked}/>})
+          let liked = this.props.liked_articles.includes(article.id)
+
+
+          return <ArticleInFeed key={article.id} article={ article } isLiked={liked}/>}, this)
       }
 
       return (
@@ -35,9 +37,9 @@ class ShowFeedByInterest extends Component {
 }
 
 function mapStatetoProps(state) {
-  debugger
   return {
-    feed: state.feed
+    feed: state.feed,
+    liked_articles: state.currentUser.like_ids
   }
 }
 

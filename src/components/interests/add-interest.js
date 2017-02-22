@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 import { connect } from 'react-redux'
 import { bindActionCreators } from 'redux'
 import { addInterest } from '../../actions'
+import { fetchFeed } from '../../actions'
 import AvailableInterests from './available-interests'
 
 class AddInterest extends Component {
@@ -15,14 +16,14 @@ class AddInterest extends Component {
     this.setState({
       interest_field: event.target.value
     })
-
-
   }
 
   handleSubmit(event) {
     event.preventDefault()
-    const interest = { id: "submit", interest: this.refs.interest.value }
-    this.props.addInterest(interest);
+    if (this.refs.interest.value !== "") {
+      const interest = { id: "submit", interest: this.refs.interest.value }
+      this.props.addInterest(interest);
+    }
   }
 
   render() {
@@ -31,7 +32,7 @@ class AddInterest extends Component {
       <div className="form">
         <form onSubmit={ this.handleSubmit }>
         <input ref="interest" onChange={ this.handleChange.bind(this)} placeholder="new interest" value={ this.state.interest_field } />
-        <button type="button"> Submit </button>
+        <button onClick={ this.handleSubmit } type="button"> Submit </button>
         </form>
       <AvailableInterests current_search= { this.state.interest_field  } />
       </div>
@@ -42,7 +43,7 @@ class AddInterest extends Component {
 }
 
 function mapDispatchtoProps (dispatch) {
-  return bindActionCreators( {addInterest}, dispatch)
+  return bindActionCreators( {addInterest, fetchFeed }, dispatch)
 }
 
 export default connect (null, mapDispatchtoProps)(AddInterest)

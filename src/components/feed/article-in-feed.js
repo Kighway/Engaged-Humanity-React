@@ -11,13 +11,22 @@ class ArticleInFeed extends Component {
       let liked = this.props.isLiked
       return (
         <div className="article-container" key={this.props.article.id}>
-          <h6> {article.id } </h6>
-          <h1> { article.title } </h1>
-          <a href>{article.link}</a>
-          <p>{article.author}</p>
-          <p>{article.source}</p>
-          <p>{article.date}</p>
-          <p>{article.description}</p>
+          <div className="article-image-container">
+            <img className="article-image" src={article.image_url } />
+          </div>
+
+          <div className="article-content">
+            <div className="feed-article-title"> { article.title } </div>
+            <div className="feed-article-description">{article.description}</div>
+            { /* convert to Link */ }
+            <a className="feed-article-link" href>{article.url}</a>
+            <div className="feed-small-details">
+              <div className="feed-article-author" ><span className="feed-small-fieldnames">Author:</span> {article.author}</div>
+              <div className="feed-article-source"><span className="feed-small-fieldnames">Source:</span> {article.source}</div>
+              { /* <div className="feed-article-date">{article.date}</div> */ }
+            </div>
+          </div>
+
           <LikeButton articleId={ article.id }  isLiked = { liked } />
         </div>
       )

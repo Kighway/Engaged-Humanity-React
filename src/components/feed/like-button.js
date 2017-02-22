@@ -15,9 +15,11 @@ class LikeButton extends Component {
 
   render() {
       if (this.props.isLiked) {
-        var buttonContent = "Unlike"
+        var buttonContent = "Trusted"
+        var class_name = "recommended like-button"
       } else {
-        var buttonContent = "Like"
+        var buttonContent = "Trust?"
+        var class_name = "not-recommended like-button"
       }
 
 
@@ -26,7 +28,7 @@ class LikeButton extends Component {
 
 
       return (
-        <button type="button" onClick={this.handleClick}>{ buttonContent }</button>
+        <button type="button" className={ class_name } onClick={this.handleClick}>{ buttonContent }</button>
       )
     }
 }

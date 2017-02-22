@@ -10,6 +10,7 @@ import ShowProfile from './components/user_views/show-profile'
 import ShowOtherProfile from './components/user_views/show-other-profile'
 import WholeInterests from './components/interests/interests-container'
 import FollowingsContainer from './components/followings/followings-container'
+import CreateArticleContainer from './components/add_article/create-article-container'
 
 export default (
 
@@ -18,10 +19,11 @@ export default (
         <Route path='/signin' component={UserSignIn}></Route>
         <Route path='/signup' component={UserSignUp}></Route>
         <Route path='/showfeed' component={FeedContainer}></Route>
+        <Route path='/create-article' component={ CreateArticleContainer }></Route>
+        <Route path='/interests' component={WholeInterests}></Route>
+        <Route path='/friends' component={FollowingsContainer}></Route>
         <Route path='/showprofile' component={ShowProfile}>
           <Route path='/:username' component={ShowOtherProfile}></Route>
         </Route>
-        <Route path='/interests' component={WholeInterests}></Route>
-        <Route path='/friends' component={FollowingsContainer}></Route>
     </Route>
 )

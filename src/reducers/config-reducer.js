@@ -15,6 +15,12 @@ export default (state={valid_username: {}}, action) => {
         return {...state, potential_followings: action.payload.potential_followings }
       case "TOGGLE_FOLLOWING":
         return {...state, potential_followings: [], searchField: ""}
+      case "TOGGLE_LIKE":
+        return {...state, potential_article: false, potential_interests: ""}
+      case "ADD_POTENTIAL_INTEREST":
+        return {...state, potential_interest: action.payload }
+
+
     default:
       return state
   }
