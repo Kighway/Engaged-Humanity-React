@@ -3,6 +3,7 @@ import { connect } from 'react-redux'
 import { bindActionCreators } from 'redux'
 import { fetchFeed } from '../../actions'
 import FeedTabs from './feed-tabs'
+import InterestsContainer from '../interests/interests-container'
 
 class FeedContainer extends Component {
 
@@ -20,6 +21,7 @@ class FeedContainer extends Component {
   render() {
     return <div>
       < FeedTabs />
+      < InterestsContainer />
     </div>
   }
 }
