@@ -15,10 +15,10 @@ class LikeButton extends Component {
 
   render() {
       if (this.props.isLiked) {
-        var buttonContent = "Trusted"
+        var buttonContent = "Unlike"
         var class_name = "recommended like-button"
       } else {
-        var buttonContent = "Trust?"
+        var buttonContent = "Like"
         var class_name = "not-recommended like-button"
       }
 

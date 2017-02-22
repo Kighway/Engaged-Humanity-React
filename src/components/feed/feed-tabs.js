@@ -13,6 +13,9 @@ class FeedTabs extends Component {
         <Tabs.Panel title='Articles by Interests'>
           < ShowFeedByInterests />
         </Tabs.Panel>
+        <Tabs.Panel title='Create Article'>
+          < ShowFeedByInterests />
+        </Tabs.Panel>
       </Tabs>
 
     </div>

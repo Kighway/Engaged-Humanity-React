@@ -30,7 +30,7 @@ class ArticleInFeed extends Component {
             <div className="feed-article-title"> { article.title } </div>
             <div className="feed-article-description">{article.description}</div>
             { /* convert to Link */ }
-            <a className="feed-article-link" href>{article.url}</a>
+            <a className="feed-article-link" href={article.url}>{article.url}</a>
             <div className="feed-small-details">
               <div className="feed-article-author" ><span className="feed-small-fieldnames">Author:</span> {article.author}</div>
               <div className="feed-article-source"><span className="feed-small-fieldnames">Source:</span> {article.source}</div>
