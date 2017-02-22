@@ -7,11 +7,11 @@ import StatsContainer from './stats-container'
 
 
 class ShowProfile extends Component {
-
   render() {
     if (this.props.currentUser) {
       return (
         <div className="profile-container">
+          <h1>HELLO FROM SHOW PROFILE</h1>
           < StatsContainer />
           < InterestsContainer />
           < FollowingsContainer />
