@@ -3,6 +3,7 @@ import { connect } from 'react-redux'
 import { bindActionCreators } from 'redux'
 import { fetchLinkSummary } from '../../actions'
 import { createArticle } from '../../actions'
+import { fetchFeed } from '../../actions'
 import FetchLinkSummaryComponent from './fetch-article'
 import validUrl from 'valid-url'
 import AddInterestToArticle from './add-interest-to-article-copy'
@@ -206,6 +207,7 @@ class CreateArticleContainer extends Component {
     if (form_errors.length === 0) {
       console.log("Valid form.  Submit!")
       this.props.createArticle(form_input);
+      this.props.fetchFeed();
     } else {
       console.log("Invalid form.  Try again.")
       console.log(form_errors)
@@ -280,7 +282,7 @@ class CreateArticleContainer extends Component {
 }
 
 function mapDispatchtoProps (dispatch) {
-  return bindActionCreators( { fetchLinkSummary, createArticle }, dispatch)
+  return bindActionCreators( { fetchLinkSummary, createArticle, fetchFeed }, dispatch)
 }
 
 function mapStatetoProps(state) {

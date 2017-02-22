@@ -1,6 +1,8 @@
 import React, { Component } from 'react'
 import ShowFeedByFollowingLikes from './show-feed-by-following-likes'
 import ShowFeedByInterests from './show-feed-by-interests'
+import CreateArticleContainer from '../add_article/create-article-container'
+
 import Tabs from 'react-simpletabs'
 
 class FeedTabs extends Component {
@@ -14,7 +16,7 @@ class FeedTabs extends Component {
           < ShowFeedByInterests />
         </Tabs.Panel>
         <Tabs.Panel title='Create Article'>
-          < ShowFeedByInterests />
+          < CreateArticleContainer />
         </Tabs.Panel>
       </Tabs>
 
