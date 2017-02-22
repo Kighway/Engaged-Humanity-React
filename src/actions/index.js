@@ -116,6 +116,8 @@ export function fetchLinkSummary(url) {
   return {
     payload: responsePromise,
     type: "POTENTIAL_ARTICLE"
+  }
+}
 
  export function getOtherProfile(FollowingId) {
   debugger
