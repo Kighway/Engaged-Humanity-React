@@ -21,7 +21,7 @@ class FeedContainer extends Component {
   render() {
     return <div>
       < FeedTabs />
-      < InterestsContainer />
+
     </div>
   }
 }

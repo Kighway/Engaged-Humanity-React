@@ -18,10 +18,10 @@ export default (
         <Route path='/signin' component={UserSignIn}></Route>
         <Route path='/signup' component={UserSignUp}></Route>
         <Route path='/showfeed' component={FeedContainer}></Route>
+        <Route path='/interests' component={WholeInterests}></Route>
+        <Route path='/friends' component={FollowingsContainer}></Route>
         <Route path='/showprofile' component={ShowProfile}>
           <Route path='/:username' component={ShowOtherProfile}></Route>
         </Route>
-        <Route path='/interests' component={WholeInterests}></Route>
-        <Route path='/friends' component={FollowingsContainer}></Route>
     </Route>
 )

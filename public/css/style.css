@@ -275,7 +275,7 @@ a:link {
   font-family: "Roboto", sans-serif;
   text-transform: uppercase;
   outline: 0;
-  background: #4CAF50;
+  background: #637192;
   width: 100%;
   border: 0;
   padding: 15px;
@@ -286,7 +286,10 @@ a:link {
   cursor: pointer;
 }
 
-
+.whole-interests {
+  width: 400px;
+  margin: auto;
+}
 
 button {
   font-family: "Roboto", sans-serif;

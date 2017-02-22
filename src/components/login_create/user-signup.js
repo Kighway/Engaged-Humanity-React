@@ -19,6 +19,7 @@ class UserSignUp extends Component {
                  , validEmail: ''
                  , validPassword: ''
                  , validPasswordConfirmation: ''
+                 , profile_url: ''
                 }
   }
 
@@ -103,6 +104,7 @@ class UserSignUp extends Component {
     const form_input = { first_name: this.refs.first_name.value
                         , last_name: this.refs.last_name.value
                         , username: this.refs.username.value
+                        , profile_url: this.refs.profile_url.value
                         , email: this.refs.email.value
                         , password: this.refs.password.value
                         , password_confirmation: this.refs.passwordConfirmation.value }
@@ -116,6 +118,10 @@ class UserSignUp extends Component {
       console.log("Invalid form.  Try again.")
       console.log(form_errors)
     };
+
+    // if (this.refs.profile_url.value === "") {
+    //   this.refs.profile_url.value = "http://i.imgur.com/I5osTAt.png"
+    // }
   }
 
   render() {
@@ -153,11 +159,15 @@ class UserSignUp extends Component {
 
         { /* password input */ }
         <div className="create-user-error"> { this.state.validPassword } </div>
-        <input data-validation="validPassword" data-ref="password" ref="password" onChange={this.handleAChange.bind(this)} placeholder="password" value={this.state.password}/>
+        <input data-validation="validPassword" type="password" data-ref="password" ref="password" onChange={this.handleAChange.bind(this)} placeholder="password" value={this.state.password}/>
 
         { /* password confirmation input */ }
         <div className="create-user-error"> { this.state.validPasswordConfirmation } </div>
         <input type="password" ref="passwordConfirmation" placeholder="verify password"/>
+
+        { /* profile image */ }
+        <div className="create-user-error"> { this.state.validPasswordConfirmation } </div>
+        <input type="url" ref="profile_url" placeholder="link to profile photo"/>
 
         { /* submit */ }
         <button type="submit"> Submit </button>

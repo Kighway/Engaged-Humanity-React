@@ -15,6 +15,7 @@ class ShowProfile extends Component {
           <img className="profile-pic" src={ this.props.currentUser.profile_url } />
 
           < StatsContainer />
+          < InterestsContainer />
         </div>
       )
     }
