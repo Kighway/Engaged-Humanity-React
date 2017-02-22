@@ -111,7 +111,13 @@ export function searchFollowing(query) {
   }
 }
 
-export function getOtherProfile(FollowingId) {
+export function fetchLinkSummary(url) {
+  const responsePromise = articleAdapter.fetchLinkSummary(url)
+  return {
+    payload: responsePromise,
+    type: "POTENTIAL_ARTICLE"
+
+ export function getOtherProfile(FollowingId) {
   debugger
   var responsePromise = 0
   return {

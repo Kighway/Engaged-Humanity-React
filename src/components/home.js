@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import FollowingsContainer from '../components/followings/followings-container'
+import CreateArticleContainer from '../components/add_article/create-article-container'
 import Logo from '../components/nav/logo.js'
 import LogOutButton from '../components/nav/logout-button.js'
 import CurrentUserDisplay from '../components/nav/current-user-display.js'
@@ -11,6 +12,7 @@ class Home extends Component {
     if (sessionStorage.jwt === "") {
     return (
       <div className="home_page">
+      {/* < CreateArticleContainer /> */ }
         { this.props.children }
       </div>
     );
