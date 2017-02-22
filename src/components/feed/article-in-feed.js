@@ -19,11 +19,12 @@ class ArticleInFeed extends Component {
       //   image_divs = {<div className="article-image-container"><div>}
       //  }
 
-      let liked = this.props.isLiked
+      var imageUrl = ((article.image_url == "") ? require("../../../public/favicon-default.jpg") : article.image_url)
+      var liked = this.props.isLiked
       return (
         <div className="article-container" key={this.props.article.id}>
           <div className="article-image-container">
-            <img className="article-image" src={article.image_url } />
+            <img className="article-image" src={ imageUrl } />
           </div>
 
           <div className="article-content">

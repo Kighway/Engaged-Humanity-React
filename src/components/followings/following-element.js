@@ -20,12 +20,12 @@ class FollowingElement extends Component {
   handleClickDelete() {
    this.props.toggleFollowing( {id: this.props.following.id })
   }
-  // <Link to={`/showprofile/${this.props.following.username}`}>{ this.props.following  }</Link>
+  // <a onClick={this.handleClick} href={"/showprofile/" + this.props.following.username + "/"} >< UserElement user={this.props.following} /></a>
   render() {
       return (
         <div className="following-element">
-        <a onClick={this.handleClick} href={"/showprofile/" + this.props.following.username + "/"} >< UserElement user={this.props.following} /></a>
-        <div className="x-div" onClick={this.handleClickDelete}> X </div>
+        <a>< UserElement user={this.props.following} /></a>
+        <div className="x-div" onClick={this.handleClickDelete}> ✖ </div>
         </div>
 
       )

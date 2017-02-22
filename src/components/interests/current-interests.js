@@ -26,7 +26,7 @@ class CurrentInterests extends Component {
            return (
              <div>
               <button type="button" > {interest.title }</button>
-              <div onClick={ this.handleRemove } data-ref={interest.id} className="interest_x"> x </div>
+              <div onClick={ this.handleRemove } data-ref={interest.id} className="interest_x"> ✖ </div>
            </div>)
          }, this) : "" }
         </div>
