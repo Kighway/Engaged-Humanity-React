@@ -9,15 +9,14 @@ class StatsContainer extends Component {
       return (
         <div className="stats-container" >
               <h1>{ this.props.currentUser.first_name } { this.props.currentUser.last_name } </h1>
-              <h2>Interests:</h2>
-              <CurrentInterests />
-              <br />
                 <div className="follower-info">
                   <h2> { this.props.currentUser.followers ? this.props.currentUser.followers.length: null } followers</h2>
                   <h2> { this.props.currentUser.followings ? this.props.currentUser.followings.length: null } following</h2>
                 </div>
                 <a href="/friends">Manage Connections</a>
-                <br />
+                <h2>Interests:</h2>
+                <CurrentInterests />
+
         </div>
       )
     }
@@ -25,7 +24,6 @@ class StatsContainer extends Component {
       return (
         <div className="profile-container">
             <div className="stat-container">
-              <h1> NOTHING HERE </h1>
             </div>
         </div>
       )

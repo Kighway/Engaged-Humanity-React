@@ -7,7 +7,18 @@ class ArticleInFeed extends Component {
 
 
   render() {
+
       let article = this.props.article
+
+
+
+      var image_divs = <div className="article-image-container"></div>
+
+
+      // if (this.props.article && this.props.article.image_url && this.props.article.image_url.length > 0) {
+      //   image_divs = {<div className="article-image-container"><div>}
+      //  }
+
       let liked = this.props.isLiked
       return (
         <div className="article-container" key={this.props.article.id}>

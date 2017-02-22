@@ -328,6 +328,16 @@ border: 1px black solid;
 .current_interest {
   font-size: 20px;
   margin: auto
+  font-size: 20px;
+  flex-wrap: wrap;
+  margin: auto;
+  display: flex;
+  width: 350px;
+}
+
+.interest_x {
+  position: relative;
+  display: inline-block;
 }
 
 /* profile */
@@ -486,6 +496,8 @@ button {
   font-family: 'Raleway', sans-serif;
   border: 1px darkgray solid;
   padding: 20px;
+  display: flex;
+  flex-direction: column;
   width: 300px;
 }
 
