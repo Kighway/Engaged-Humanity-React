@@ -241,11 +241,12 @@ class CreateArticleContainer extends Component {
         <div className="create-user-error"> { this.state.validURL } </div>
         <input ref="input_url" onChange={this.handleURLChange.bind(this)} placeholder="url" value={ this.state.input_url }/>
 
+        { /* image preview */ }
+        { image_preview }
+        
         <div className="create-user-error"> { this.state.validInterests } </div>
         < AddInterestToArticle callback={ this.handleCallback } content={ this.state.interests } />
 
-        { /* image preview */ }
-        { image_preview }
 
         { /* title input */ }
         <div className="create-user-error"> { this.state.validTitle } </div>
