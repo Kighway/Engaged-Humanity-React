@@ -11,7 +11,6 @@ class ShowProfile extends Component {
     if (this.props.currentUser) {
       return (
         <div className="profile-container">
-
           <img className="profile-pic" src={ this.props.currentUser.profile_url } />
           <div className="profile-components">
             < StatsContainer />
