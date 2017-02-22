@@ -64,8 +64,8 @@ body {
 }
 
 .article-image {
-  width: 100%;
-  height: 100%;
+  max-width: 100px;
+  max-height: 100px;
 }
 
 
@@ -358,17 +358,16 @@ border: 1px black solid;
 /* create article */
 
 .create-article-preview-pic {
-      height: 300px;
+      max-height: 400px;
       padding-bottom: 0 !important;
       padding-left: 0 !important;
       padding-top: 0 !important;
       border: 1px #b1aeae solid;
       background-color: #dcd4dc;
-      width: 100px;
+      max-width: 400px;
       display: block;
       margin: auto;
       position: relative;
-      height: 100px !important;
     }
 
 
@@ -422,13 +421,14 @@ a:link {
   font-size: 14px;
 }
 .form button {
-  font-family: "Roboto", sans-serif;
+  font-family: "Raleway", sans-serif;
   text-transform: uppercase;
+  outline: 0;
   background: #637192;
-    width: 50%;
-      padding: 15px;
-  color: #FFFFFF;
+  color: #f9f7f7;
   font-size: 14px;
+  width: 50%;
+  padding: 15px;
   -webkit-transition: all 0.3 ease;
   transition: all 0.3 ease;
   cursor: pointer;
@@ -437,12 +437,14 @@ a:link {
 
 
 button {
-  font-family: inherit;
+  font-family: "Raleway", sans-serif;
   text-transform: uppercase;
   outline: 0;
   background: #637192;
   color: #f9f7f7;
   font-size: 14px;
+  width: 50%;
+  padding: 15px;
   -webkit-transition: all 0.3 ease;
   transition: all 0.3 ease;
   cursor: pointer;
@@ -524,7 +526,7 @@ button {
 
 
 .add-interest-container {
-  padding-top: 100px;
+  padding-top: 10px;
 }
 
 .interest-option {
