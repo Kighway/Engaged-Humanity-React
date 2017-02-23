@@ -48,9 +48,9 @@ class SearchFollowingContainer extends Component {
         return (
 
         // shape this into something
-        <div onClick={ this.handlePotentialClick } data-id={ potential_following.id } className="search-potential-following">
+        <div className="search-potential-following">
 
-          <div className="search-potential-name">
+          <div className="search-potential-name" onClick={ this.handlePotentialClick } data-id={ potential_following.id }>
             { potential_following.username }
           </div>
         </div>
