@@ -9,7 +9,7 @@ class NavBarWO extends Component {
       return (
         <div>
           <div className="nav-bar">
-          <a href='/'> HO2ME • </a>
+          <a href='/'> HOME • </a>
           <a href='/signup'> SIGN UP • </a>
           <a href='/signin'> SIGN IN  </a>
           </div>
