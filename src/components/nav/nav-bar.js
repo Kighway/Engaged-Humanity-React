@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import LogOutButton from '../nav/logout-button.js'
 import CurrentUserDisplay from './current-user-display.js'
 import WholeInterests from '../interests/interests-container'
+import { Link } from 'react-router'
 
 class NavBar extends Component {
     render () {
@@ -9,8 +10,8 @@ class NavBar extends Component {
         return (
           <div>
             <div className="nav-bar">
-            <a href='/'> HOME • </a>
-            <a href='/showfeed'> FEED • </a>
+            <Link to={`/`} activeClassName="active">HOME • </Link>
+            <Link to={`/showfeed`} activeClassName="active">FEED • </Link>
             <LogOutButton/> •
             <a href='/showprofile'> <CurrentUserDisplay /></a>
             <p></p>
@@ -22,9 +23,9 @@ class NavBar extends Component {
           <div>
           <img src='favicon.ico' className="App-logo" alt="logo" />
             <div className="nav-bar">
-            <a href='/'> HOME • </a>
-            <a href='/signup'> SIGN UP • </a>
-            <a href='/signin'> SIGN IN  </a>
+            <Link to={`/`} activeClassName="active">HOME • </Link>
+            <Link to={`/signup`} activeClassName="active">SIGN UP • </Link>
+            <Link to={`/signin`} activeClassName="active">SIGN IN</Link>
             </div>
           </div>
         );

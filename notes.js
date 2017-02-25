@@ -1,3 +1,17 @@
+
+
+Andrew Nease: Speech Language Pathologist/English Major
+Kyle Tulod: Religious Studies, focus on East Asia, minor in Japanese studies, some physics coursework.
+Jenny Kats: Recent Psychology/Business: Marketing graduate. Business Development Manager.
+
+Problem we were trying to solve: As an alternative to the viral and unreliable content that often floods most social networks, we created a social network that allows users to curate a relevant and interesting news feed based on trusted connections and personal interests.
+
+The user creates an account that allows them to manage their connections and add relevant interests. They interact with a modern single page UI implemented in React/Redux. Their feed then becomes populated from a data store maintained on the front-end containing articles that have been liked by their connections or are relevant to their interests. This data is fetched by API calls to a public-facing API written with Ruby on Rails that executes user authentication and database management.
+
+
+
+
+
 // in actions index
 const BASE_URL = 'http://localhost.com:3000'
 
