@@ -1,9 +1,9 @@
 import axios from 'axios'
 import Metascraper from 'metascraper'
+import config from '../config'
 
 
-
-axios.defaults.baseURL = 'https://damp-bayou-35607.herokuapp.com'
+axios.defaults.baseURL = config.base_url
 
 axios.defaults.headers.common['AUTHORIZATION'] = sessionStorage.getItem('jwt')
 
