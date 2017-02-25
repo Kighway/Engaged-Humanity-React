@@ -1,6 +1,6 @@
 import axios from 'axios'
 
-axios.defaults.baseURL = 'http://localhost:3000/api/v1'
+axios.defaults.baseURL = 'https://damp-bayou-35607.herokuapp.com'
 
 // the problem here is it will only set a default once, right?
 axios.defaults.headers.common['AUTHORIZATION'] = sessionStorage.getItem('jwt')

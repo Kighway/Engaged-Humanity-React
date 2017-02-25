@@ -3,7 +3,7 @@ import Metascraper from 'metascraper'
 
 
 
-axios.defaults.baseURL = 'http://localhost:3000/api/v1'
+axios.defaults.baseURL = 'https://damp-bayou-35607.herokuapp.com'
 
 axios.defaults.headers.common['AUTHORIZATION'] = sessionStorage.getItem('jwt')
 
