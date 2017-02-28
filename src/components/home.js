@@ -18,7 +18,6 @@ class Home extends Component {
   } else {
     return (
       <div>
-      <img src='favicon.ico' className="App-logo" alt="logo" />
 
       </div>
       );

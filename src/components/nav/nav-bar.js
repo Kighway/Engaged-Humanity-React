@@ -23,7 +23,6 @@ class NavBar extends Component {
           <div>
           <img src='favicon.ico' className="App-logo" alt="logo" />
             <div className="nav-bar">
-            <Link to={`/`} activeClassName="active">HOME • </Link>
             <Link to={`/signup`} activeClassName="active">SIGN UP • </Link>
             <Link to={`/signin`} activeClassName="active">SIGN IN</Link>
             </div>

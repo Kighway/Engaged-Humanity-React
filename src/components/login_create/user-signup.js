@@ -153,7 +153,7 @@ class UserSignUp extends Component {
 
         { /* password input */ }
         <div className="create-user-error"> { this.state.validPassword } </div>
-        <input data-validation="validPassword" data-ref="password" ref="password" onChange={this.handleAChange.bind(this)} placeholder="password" value={this.state.password}/>
+        <input type="password" data-validation="validPassword" data-ref="password" ref="password" onChange={this.handleAChange.bind(this)} placeholder="password" value={this.state.password}/>
 
         { /* password confirmation input */ }
         <div className="create-user-error"> { this.state.validPasswordConfirmation } </div>

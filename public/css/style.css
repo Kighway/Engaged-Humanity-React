@@ -5,15 +5,11 @@
 }
 
 .App-logo {
-  /*animation: App-logo-spin infinite 20s linear;*/
-  padding-top: 100px;
+  /*animation: App-logo-spin infinite 20s linear; */
   height: 340px;
-  position: inherit;
-  left: 35%;
   opacity: 121.7;
   z-index: -2;
-  z-index: 30px;
-  padding-left: 60px;}
+}
 
 /*.App-header {
   background-color: #9dafcc;

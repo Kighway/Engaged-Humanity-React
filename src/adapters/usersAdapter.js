@@ -23,6 +23,7 @@ export default {
   },
 
   createUser: function (userParams) {
+  debugger
   // this is the promise passed to the responseObject in the action/index.js
   return axios.post('/signup', userParams)
     .then( (response) => {
@@ -55,7 +56,6 @@ export default {
 
     return axios.post('/signin', userParams)
       .then( (response) => {
-
         // if the username and password are authenticated...
         if (response.data.jwt) {
           sessionStorage.setItem('jwt', response.data.jwt)
