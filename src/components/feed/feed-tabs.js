@@ -9,7 +9,7 @@ class FeedTabs extends Component {
   render() {
     return <div id="feed-container">
       <Tabs>
-        <Tabs.Panel title='Trusted Articles'>
+        <Tabs.Panel title='Collected Articles'>
           < ShowFeedByFollowingLikes />
         </Tabs.Panel>
         <Tabs.Panel title='Articles by Interests'>

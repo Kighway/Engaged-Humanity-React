@@ -10,7 +10,6 @@ class NavBar extends Component {
         return (
           <div>
             <div className="nav-bar">
-            <Link to={`/`} activeClassName="active">HOME • </Link>
             <Link to={`/showfeed`} activeClassName="active">FEED • </Link>
             <LogOutButton/> •
             <a href='/showprofile'> <CurrentUserDisplay /></a>
